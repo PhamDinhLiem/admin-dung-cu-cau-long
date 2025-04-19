@@ -6,22 +6,32 @@ import Nav from "./nav";
 import { HomePageScreenWrapper } from "./styled";
 
 import { useContext, useEffect, useState } from "react";
+import useWindowResize from "@/hooks/use-window-resize";
 
 interface HomePageScreenProps {}
 
 // Dynamically import a component
 
 const HomePageScreen = ({}: HomePageScreenProps) => {
+  const size: any = useWindowResize();
   const { initJs } = useContext(AppContext);
   const [readyToRender, setReadyToRender] = useState(false);
 
   useEffect(() => {
     if (initJs) {
-      window.innerWidth = 375;
-      window.dispatchEvent(new Event("resize"));
+      if (size.width > 786) {
+        window.innerWidth = 786;
+        window.dispatchEvent(new Event("resize"));
 
-      window.innerWidth = 1024;
-      window.dispatchEvent(new Event("resize"));
+        window.innerWidth = 1024;
+        window.dispatchEvent(new Event("resize"));
+      } else {
+        window.innerWidth = 1024;
+        window.dispatchEvent(new Event("resize"));
+
+        window.innerWidth = 786;
+        window.dispatchEvent(new Event("resize"));
+      }
     }
   }, [initJs]);
 
