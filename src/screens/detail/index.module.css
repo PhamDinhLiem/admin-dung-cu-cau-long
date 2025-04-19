@@ -1,0 +1,25 @@
+.content_wrapper {
+  display: flex;
+  gap: 65px;
+  margin-bottom: 60px;
+
+  @media (max-width: 786px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.content_left {
+  width: calc(67% - 10px);
+}
+
+.content_right {
+  width: calc(33% + 10px);
+}
+
+@media (max-width: 768px) {
+  .content_left,
+  .content_right {
+    width: 100%;
+  }
+}
