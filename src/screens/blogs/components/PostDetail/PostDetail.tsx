@@ -58,7 +58,7 @@ export default function PostDetail({ post }: any) {
   return (
     <div className="lg:p-8 pb-12 mb-8">
       <h1 className={cx("title")}>
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
+        <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
       </h1>
 
       {/* tách ra 1 component */}

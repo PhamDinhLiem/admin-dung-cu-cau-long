@@ -79,7 +79,7 @@ export default function PostWidget({ categories, slug }) {
           </div>
           <div className="ml-3">
             <p>{moment(post.createdAt).format("MMM DD, YYYY")}</p>
-            <Link href={`/post/${post.slug}`}>{post.slug}</Link>
+            <Link href={`/blogs/${post.slug}`}>{post.slug}</Link>
           </div>
         </div>
       ))}
