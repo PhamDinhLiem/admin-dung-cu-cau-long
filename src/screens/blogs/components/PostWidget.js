@@ -25,7 +25,7 @@ export default function PostWidget({ categories, slug }) {
           },
         },
         {
-          title: "How Blockchain is Revolutionizing Finance1",
+          title: "How B1 lockchain is Revolutionizing Finance1",
           slug: "how-blockchain-is-revolutionizing-finance",
           createdAt: "2025-04-17T16:00:00Z",
           featuredImage: {
