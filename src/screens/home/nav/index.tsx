@@ -16,8 +16,8 @@ const Nav = ({}: NavProps) => {
           </div>
         </a>
         <div className="ui-circle line" />
-        <a href="/vision" data-w-id="5f59990b-0652-e81d-fcfa-d7629bf5b26e" className="nav_links w-inline-block">
-          <div className="text-block-18">VISION</div>
+        <a href="/blogs" data-w-id="5f59990b-0652-e81d-fcfa-d7629bf5b26e" className="nav_links w-inline-block">
+          <div className="text-block-18">BLOGS</div>
           <div className="outline-hover w-hidden-medium w-hidden-small w-hidden-tiny">
             <div className="fill-hover" />
           </div>

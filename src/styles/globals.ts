@@ -3,6 +3,7 @@ import { Inter, Lora } from "next/font/google";
 import { createGlobalStyle, css } from "styled-components";
 import { device } from "./media";
 import { TimeframeStyle } from "./timeframe";
+import { BlogsStyle } from "./blogs";
 
 const inter = Inter({ subsets: ["latin"], preload: true, fallback: ["Arial"] });
 const lora = Lora({ subsets: ["latin"], preload: true, fallback: ["Arial"] });
@@ -42,7 +43,7 @@ export const ScrollBarStyle = css`
   }
 `;
 
-const style = css`
+export const style = css`
   :root {
     --font-inter: ${inter.style.fontFamily};
     --font-lora: ${inter.style.fontFamily};
@@ -288,7 +289,6 @@ const style = css`
 `;
 
 export const GlobalStyle = createGlobalStyle`
-  /* ${style}
-  ${ScrollBarStyle} */
-  /* ${TimeframeStyle} */
+  ${style}
+  ${BlogsStyle}
 `;

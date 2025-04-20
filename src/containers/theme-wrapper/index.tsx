@@ -1,6 +1,8 @@
 "use client";
 
+import LayoutHome from "@/components/layout-home";
 import AppContext from "@/contexts/app";
+import LayoutBlogs from "@/screens/blogs/components/layouts/LayoutBlogs";
 import { usePathname } from "next/navigation";
 import { Fragment, ReactNode, useContext, useEffect, useMemo } from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
@@ -40,6 +42,12 @@ const ThemeWrapper = ({ children, theme }: ThemeWrapperProps) => {
   const Layout = useMemo(() => {
     if (["/_error"].includes(pathname)) {
       return Fragment;
+    }
+    if (!["/"].includes(pathname)) {
+      return LayoutBlogs;
+    }
+    if (["/"].includes(pathname)) {
+      return LayoutHome;
     }
 
     return Fragment;

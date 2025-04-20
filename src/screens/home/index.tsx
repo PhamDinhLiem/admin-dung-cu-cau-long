@@ -4,9 +4,8 @@ import AppContext from "@/contexts/app";
 import Loader from "./loading";
 import Nav from "./nav";
 import { HomePageScreenWrapper } from "./styled";
-
-import { useContext, useEffect, useState } from "react";
 import useWindowResize from "@/hooks/use-window-resize";
+import { useContext, useEffect } from "react";
 
 interface HomePageScreenProps {}
 
@@ -15,7 +14,6 @@ interface HomePageScreenProps {}
 const HomePageScreen = ({}: HomePageScreenProps) => {
   const size: any = useWindowResize();
   const { initJs } = useContext(AppContext);
-  const [readyToRender, setReadyToRender] = useState(false);
 
   useEffect(() => {
     if (initJs) {
@@ -46,7 +44,7 @@ const HomePageScreen = ({}: HomePageScreenProps) => {
           <Loader />
           <Nav />
 
-          <a href="/vision" className="_w-logo-ts w-inline-block">
+          <a href="/blogs" className="_w-logo-ts w-inline-block">
             <img
               src="https://cdn.prod.website-files.com/5c6648378238e311a00c7e61/5ef4dcd563897e74b55d1045_Artboard.svg"
               width={150}

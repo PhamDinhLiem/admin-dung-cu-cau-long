@@ -40,22 +40,6 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       data-wf-site="5c6648378238e311a00c7e61"
       className="w-mod-js w-mod-ix wf-proximanova-n9-active wf-proximanova-n7-active wf-proximanova-i7-active wf-proximanova-n8-active wf-proximanova-n1-active wf-proximanova-n6-active wf-proximanova-n4-active wf-proximanova-i4-active wf-proximanova-n5-active wf-halyarddisplay-n1-active wf-halyarddisplay-n2-active wf-halyarddisplay-n3-active wf-halyarddisplay-n4-active wf-halyarddisplay-n5-active wf-halyarddisplay-n6-active wf-halyarddisplay-n7-active wf-halyarddisplay-n9-active wf-active mdl-js"
     >
-      <head>
-        <title>TimeFrame</title>
-        <meta content="TimeFrame" property="og:title" />
-        <meta content="TimeFrame" property="twitter:title" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Webflow" name="generator" />
-        <link
-          href="https://cdn.prod.website-files.com/5c6648378238e311a00c7e61/css/timeframe-app.webflow.c12526bf8.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon" />
-        <link rel="stylesheet" href="https://use.typekit.net/tbu5azf.css" />
-      </head>
-
       <StyledComponentsRegistry>
         <body
           data-w-id="5bca679bbae718229c49a9d1"
