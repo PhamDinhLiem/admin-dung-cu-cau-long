@@ -36,7 +36,7 @@ export default function PostWidget({ categories, slug }) {
     } else {
       setRelatedPosts([
         {
-          title: "Exploring the Future of Artificial Intelligence",
+          title: "Exploring the Future of1 Artificial Intelligence",
           slug: "exploring-the-future-of-artificial-intelligence",
           createdAt: "2025-04-19T14:32:00Z",
           featuredImage: {
