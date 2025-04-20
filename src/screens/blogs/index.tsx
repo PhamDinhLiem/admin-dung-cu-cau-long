@@ -2,9 +2,6 @@
 
 import React from "react";
 import { BlogsScreenWrapper } from "./styled";
-import Head from "next/head";
-import { AnyMxRecord } from "node:dns";
-import { getPosts } from "@/services";
 import Post from "./components/Post";
 
 interface BlogsScreenProps {}

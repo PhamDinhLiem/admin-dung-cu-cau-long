@@ -132,7 +132,7 @@ function AboutMeScreen() {
 
           <div className="mt-1">
             {data[0].content.raw.children.map((typeObj: any, index: any) => {
-              const children = typeObj.children.map((item: any, itemIndex: any) => {
+              const children = typeObj.children?.map((item: any, itemIndex: any) => {
                 return getContentFragment(itemIndex, item.text, item);
               });
               return getContentFragment(index, children, typeObj, typeObj.type);
