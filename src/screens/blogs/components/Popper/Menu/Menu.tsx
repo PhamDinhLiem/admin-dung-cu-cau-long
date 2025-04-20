@@ -7,17 +7,17 @@ import MenuItem from "./MenuItem";
 
 const cx = classNames.bind(styles);
 
-export default function Menu({ children, items = [] }) {
+export default function Menu({ children, items = [] }: any) {
   const [showResult, setShowResult] = useState(true);
   const renderItem = () => {
-    return items.map((item, index) => {
+    return items.map((item: any, index: any) => {
       return <MenuItem key={index} data={item} />;
     });
   };
   const handleHideResult = () => {
     setShowResult(false);
   };
-  const renderResult = (attrs) => {
+  const renderResult = (attrs: any) => {
     return (
       <div className="box" tabIndex="-1" {...attrs}>
         <PopperWrapper>{renderItem()}</PopperWrapper>

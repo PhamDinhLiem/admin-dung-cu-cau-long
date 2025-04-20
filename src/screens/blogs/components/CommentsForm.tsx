@@ -1,4 +1,3 @@
-import { submitComment } from "@/services";
 import React, { useEffect, useRef, useState } from "react";
 export default function CommentsForm({ slug }: any) {
   const [error, setError] = useState(false);
@@ -22,14 +21,8 @@ export default function CommentsForm({ slug }: any) {
     }
 
     const commentObj = { name, email, comment, slug };
-
-    submitComment(commentObj).then((res) => {
-      setShowSuccessMessage(true);
-      setTimeout(() => {
-        setShowSuccessMessage(false);
-      }, 3000);
-    });
   };
+
   return (
     <div className="bg-white p-8 shadow-lg rounded-lg pb-12 mb-8 ">
       <h3 className="text-black font-semibold border-b pb-4 mb-6">CommentsForm</h3>

@@ -1,4 +1,3 @@
-import { getComments } from "@/services";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 
@@ -6,9 +5,23 @@ export default function Comments({ slug }: any) {
   const [comments, setComments] = useState<any>([]);
 
   useEffect(() => {
-    getComments(slug).then((result) => {
-      setComments(result);
-    });
+    setComments([
+      {
+        name: "John Doe",
+        createdAt: "2025-04-19T14:32:00Z", // Date in ISO 8601 format
+        comment: "This is a great article. I really enjoyed reading it!",
+      },
+      {
+        name: "Jane Smith",
+        createdAt: "2025-04-18T10:45:00Z",
+        comment: "I found this post to be very informative, thanks for sharing!",
+      },
+      {
+        name: "Alice Johnson",
+        createdAt: "2025-04-17T16:00:00Z",
+        comment: "Looking forward to more posts like this one!",
+      },
+    ]);
   }, []);
 
   return (

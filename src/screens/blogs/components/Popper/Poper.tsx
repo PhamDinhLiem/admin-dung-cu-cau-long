@@ -5,7 +5,7 @@ import styles from "./Popper.module.scss";
 
 const cx = classNames.bind(styles);
 
-export default function Poper({ children, className }) {
+export default function Poper({ children, className }: any) {
   return <div className={cx("wrapper", className)}>{children}</div>;
 }
 
