@@ -13,14 +13,14 @@ export default function Post({ post }: any) {
   return (
     <article className={cx("wrapper")}>
       <h1 className={cx("title")}>
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
+        <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className={cx("des")}>
         <span className={cx("date")}>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         <p className={cx("des-time")}>Reading time 10 minutes {post.author.name}</p>
       </div>
       <div className={cx("img-wrapper")}>
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/blogs/${post.slug}`}>
           <img alt="11" className={cx("img")} height={500} width="100%" src={post.featuredImage.url} />
         </Link>
       </div>
