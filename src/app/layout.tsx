@@ -1,6 +1,6 @@
 import AppWrapper from "@/containers/app-wrapper";
 import { ensureStartsWith } from "@/utils";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import StyledComponentsRegistry from "../../lib/registry";
 import "../../src/styles/global.css";
 import Script from "next/script";
