@@ -1,16 +1,65 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import moment from "moment";
-import { getRecentPosts, getSimilarPosts } from "@/services";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function PostWidget({ categories, slug }) {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (slug) {
-      getSimilarPosts(categories, slug).then((result) => setRelatedPosts(result));
+      setRelatedPosts([
+        {
+          title: "Exploring the Future of Artificial Intelligence",
+          slug: "exploring-the-future-of-artificial-intelligence",
+          createdAt: "2025-04-19T14:32:00Z",
+          featuredImage: {
+            url: "https://thehanoichamomile.com/wp-content/uploads/2023/01/dscf6621.mp4_.19_41_49_27.still002.jpg?w=1500",
+          },
+        },
+        {
+          title: "The Impact of Technology on Modern Society",
+          slug: "the-impact-of-technology-on-modern-society",
+          createdAt: "2025-04-18T10:45:00Z",
+          featuredImage: {
+            url: "https://thehanoichamomile.com/wp-content/uploads/2023/01/dscf6621.mp4_.19_41_49_27.still002.jpg?w=1500",
+          },
+        },
+        {
+          title: "How B1 lockchain is Revolutionizing Finance1",
+          slug: "how-blockchain-is-revolutionizing-finance",
+          createdAt: "2025-04-17T16:00:00Z",
+          featuredImage: {
+            url: "https://thehanoichamomile.com/wp-content/uploads/2023/01/dscf6621.mp4_.19_41_49_27.still002.jpg?w=1500",
+          },
+        },
+      ]);
     } else {
-      getRecentPosts().then((result) => setRelatedPosts(result));
+      setRelatedPosts([
+        {
+          title: "Exploring the Future of1 Artificial Intelligence",
+          slug: "exploring-the-future-of-artificial-intelligence",
+          createdAt: "2025-04-19T14:32:00Z",
+          featuredImage: {
+            url: "https://thehanoichamomile.com/wp-content/uploads/2023/01/dscf6621.mp4_.19_41_49_27.still002.jpg?w=1500",
+          },
+        },
+        {
+          title: "The Impact of Technology on Modern Society",
+          slug: "the-impact-of-technology-on-modern-society",
+          createdAt: "2025-04-18T10:45:00Z",
+          featuredImage: {
+            url: "https://thehanoichamomile.com/wp-content/uploads/2023/01/dscf6621.mp4_.19_41_49_27.still002.jpg?w=1500",
+          },
+        },
+        {
+          title: "How Blockchain is Revolutionizing Finance",
+          slug: "how-blockchain-is-revolutionizing-finance",
+          createdAt: "2025-04-17T16:00:00Z",
+          featuredImage: {
+            url: "https://thehanoichamomile.com/wp-content/uploads/2023/01/dscf6621.mp4_.19_41_49_27.still002.jpg?w=1500",
+          },
+        },
+      ]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
@@ -30,7 +79,7 @@ export default function PostWidget({ categories, slug }) {
           </div>
           <div className="ml-3">
             <p>{moment(post.createdAt).format("MMM DD, YYYY")}</p>
-            <Link href={`/post/${post.slug}`}>{post.slug}</Link>
+            <Link href={`/blogs/${post.slug}`}>{post.slug}</Link>
           </div>
         </div>
       ))}
