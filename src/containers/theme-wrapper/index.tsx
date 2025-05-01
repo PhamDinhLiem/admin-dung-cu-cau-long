@@ -13,9 +13,10 @@ export type ThemeWrapperProps = {
 };
 
 const ThemeWrapper = ({ children, theme }: ThemeWrapperProps) => {
-  const pathname = usePathname();
+  const pathname = usePathname(); //Hook để lấy URl
   const { setInitJs } = useContext(AppContext);
   useEffect(() => {
+    //tạo biến ev rồi gán nó là 1 mouseEvent
     const listener = function (ev: MouseEvent) {
       const button = ev.target as HTMLButtonElement;
       if (button.tagName === "BUTTON" && !button.disabled) {

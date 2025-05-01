@@ -18,7 +18,6 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
   const [loading, setLoading] = useState<boolean>();
   const [initJs, setInitJs] = useState<boolean>();
-
   const [topics, setTopics] = useState([]);
 
   return (
