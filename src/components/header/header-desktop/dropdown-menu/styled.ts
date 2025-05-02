@@ -9,43 +9,45 @@ export const SelectWrapper = styled.div`
 
 export const DropDownWrapper = styled.div<{ show: boolean }>`
   position: absolute;
-  top: 231%;
-  left: -50px;
-  min-width: 200px;
+  top: 120%;
+  min-width: 120px;
 
   z-index: 100;
   display: flex;
   flex-direction: column;
 
-  overflow: auto;
-  background: white;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  background-color: ${({ theme }) => theme.color.status.white};
+  background-color: #f7f7f7;
+
+  h3,
+  h4 {
+    cursor: pointer !important;
+  }
 `;
 
 export const ButtonItem = styled(Link)`
-  padding: 0px !important;
-  text-align: center;
+  text-align: start;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 6px;
   color: black;
   width: 100%;
-
   text-transform: capitalize;
-
   :not(:last-child) {
     margin-bottom: 16px;
-  }
-
-  :hover {
-    color: ${({ theme }) => theme.color.status.yellow};
   }
   p {
     font-weight: 500;
     padding: 14px;
   }
 
-  &:not(:last-child) {
-    border-bottom: 1px solid ${({ theme }) => theme.color.status.gray3};
+  h5,
+  h6 {
+    font-family: var(--tanHiepHeading-medium-font) !important;
+    font-size: 16px;
+  }
+
+  :hover {
+    color: ${({ theme }) => theme.color.status.yellow};
   }
 `;
 
@@ -53,19 +55,15 @@ export const WrapperTitle = styled.div<{ show: boolean }>`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 1px;
+  gap: 6px;
 
-  p {
-    font-weight: 700;
-    font-family: var(--font-lora) !important;
-
-    cursor: pointer;
-    text-transform: uppercase;
-    color: ${({ show, theme }) => (show ? theme.color.status.white : theme.color.status.white)};
+  h3,
+  h4 {
+    cursor: pointer !important;
   }
 
   svg {
     transition: 0.3s all ease-in-out;
-    transform: ${({ show }) => (show ? "rotate(-180deg)" : "rotate(0deg) ")};
+    transform: ${({ show }) => (show ? "rotate(0deg)" : "rotate(-180deg) ")};
   }
 `;

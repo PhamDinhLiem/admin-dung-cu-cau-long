@@ -4,9 +4,8 @@ import styled from "styled-components";
 
 export const HeaderDesktopWrapper = styled.div`
   width: 100%;
-  position: fixed;
+  //position: fixed;
   z-index: 999;
-  background-color: ${({ theme }) => theme.color.status.primary};
 `;
 
 export const HeaderDesktopContent = styled(Container)`
@@ -26,7 +25,7 @@ export const MenuList = styled.div<{}>`
   align-items: center;
 
   height: 65px;
-  gap: 24px;
+  gap: 40px;
   /* justify-content: space-between; */
   transition: all 0.3s ease;
   a {
@@ -53,12 +52,24 @@ export const MenuItem = styled.div<{ $active: boolean; $isHavePathName?: boolean
       $active ? theme.color.status.yellow : $isHavePathName ? theme.color.status.white : theme.color.text.body};
   }
 
-  p:hover {
+  h3,
+  h4 {
+    font-size: 18px;
+  }
+
+  h1,
+  h2 {
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  h3,
+  h4:hover {
     color: ${({ theme }) => theme.color.status.yellow} !important;
+    border-bottom: 1px solid ${({ theme }) => theme.color.status.yellow} !important;
   }
 
   height: 100%;
-  text-transform: uppercase;
   transition: all 0.3s ease;
 
   /* border-right: 1px solid black; */

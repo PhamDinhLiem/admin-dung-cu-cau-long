@@ -28,7 +28,7 @@ const DropdownMenu = ({ value, data, onChange, title, showDropdown, setShow }: a
       <DropDownWrapper show={Boolean(showDropdown == value)} ref={dropdownRef}>
         {map(data, (d) => (
           <ButtonItem key={d.value} href={`${d.href}`}>
-            <p className="body-2">{d.label}</p>
+            <h5 className="body-2">{d.label}</h5>
           </ButtonItem>
         ))}
       </DropDownWrapper>
@@ -39,13 +39,14 @@ const DropdownMenu = ({ value, data, onChange, title, showDropdown, setShow }: a
   return (
     <SelectWrapper ref={ref}>
       <WrapperTitle show={showDropdown == value}>
-        <p
+        <h4
+          className="text-lg"
           onClick={(e) => {
             setShow(value);
           }}
         >
           {title}
-        </p>
+        </h4>
         <ButtonIcon>
           <IconDropdownExpend />
         </ButtonIcon>

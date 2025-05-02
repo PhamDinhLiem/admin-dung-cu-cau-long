@@ -11,6 +11,8 @@ import { useContext, useEffect, useRef, useState } from "react";
 import HeaderDesktop from "./header-desktop";
 import HeaderMobile from "./header-mobile";
 import { HeaderWrapper } from "./styled";
+import TanHiepBlog from "@/app/tanHiepblog/page";
+import { tanHiepBigHeadingBlogFont, tanHiepMediumHeadingBlogFont } from "@/styles/font";
 
 interface HeaderProps {}
 
@@ -25,6 +27,37 @@ const Header = () => {
   const [getTopics] = useLazyQuery<any>(GET_TOPICS, {
     fetchPolicy: "network-only",
   });
+
+  const listMenuTanHiepBlog: LinkProps[] = [
+    { value: "home", label: "Home", href: "/blogs", type: "link" },
+    { value: "about", label: "About", href: "/about", type: "link" },
+    {
+      value: "personal",
+      label: "Personal",
+      href: "/personal/oveview",
+      type: "button",
+      children: [
+        { value: "overview", label: "Overview", href: "/personal/overview", type: "link" },
+        { value: "latest-news", label: "Latest News", href: "/personal/latest-news", type: "link" },
+        { value: "market", label: "Market", href: "/personal/market", type: "link" },
+        { value: "business", label: "Business", href: "/personal/business", type: "link" },
+        { value: "life-style", label: "LifeStyle", href: "/personal/life-style", type: "link" },
+        { value: "education", label: "Education", href: "/personal/education", type: "link" },
+        { value: "resources", label: "Resources", href: "/personal/resoucres", type: "link" },
+      ],
+    },
+    {
+      value: "media",
+      label: "Media",
+      type: "button",
+      children: [
+        { value: "linkedin", label: "Linkedin", href: "/personal/overview", type: "link" },
+        { value: "facebook", label: "Facebook ", href: "/personal/latest-news", type: "link" },
+        { value: "instagram", label: "Instagram", href: "/personal/market", type: "link" },
+      ],
+    },
+    { value: "contact", label: "Contact", href: "/contact", type: "link" },
+  ];
 
   const listMenu: LinkProps[] = [
     // { value: "/", label: t("header.menu_1"), href: "/", type: "link" },
@@ -107,9 +140,9 @@ const Header = () => {
   });
 
   return (
-    <HeaderWrapper>
-      <HeaderDesktop data={listFilterMenu} showInput={showInput} setShowInput={setShowInput} />
-      <HeaderMobile data={listFilterMenu} showInput={showInput} setShowInput={setShowInput} />
+    <HeaderWrapper className={`${tanHiepBigHeadingBlogFont.variable} ${tanHiepMediumHeadingBlogFont.variable}`}>
+      <HeaderDesktop data={listMenuTanHiepBlog} showInput={showInput} setShowInput={setShowInput} />
+      <HeaderMobile data={listMenuTanHiepBlog} showInput={showInput} setShowInput={setShowInput} />
     </HeaderWrapper>
   );
 };

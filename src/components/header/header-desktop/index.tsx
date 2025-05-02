@@ -1,12 +1,14 @@
 "use client";
 
 import { LinkProps } from "@/@custom-types";
-import { Flex } from "@/styles/common";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dispatch, SetStateAction, useState } from "react";
 import DropdownMenu from "./dropdown-menu";
 import { HeaderDesktopContent, HeaderDesktopWrapper, MenuItem, MenuList } from "./styled";
+import HeaderInput from "../header-input";
+import { Flex } from "@/styles/common";
 
 export type HeaderProps = {
   data: LinkProps[] | undefined;
@@ -23,12 +25,10 @@ const HeaderDesktop = ({ data, showInput, setShowInput }: HeaderProps) => {
       <HeaderDesktopContent>
         <Flex>
           <Link href={"/"}>
-            <img width={130} src={`${process.env.basePath}/img/logo_homeease.png`} alt="" />
+            <h2>Tan Hiep</h2>
           </Link>
         </Flex>
-        {/* {showInput ? (
-          <HeaderInput setShowInput={setShowInput} />
-        ) : ( */}
+        {/* showInput ? <HeaderInput setShowInput={setShowInput} /> : <div></div>*/}
         <MenuList>
           {data?.map((item, index) => (
             <div key={index}>
@@ -42,8 +42,8 @@ const HeaderDesktop = ({ data, showInput, setShowInput }: HeaderProps) => {
                 />
               ) : (
                 <Link href={item.href ?? ""} key={index}>
-                  <MenuItem $active={pathname == item.href} $isHavePathName={pathname.length > 0}>
-                    <p>{item.label}</p>
+                  <MenuItem className="text-lg" $active={pathname == item.href} $isHavePathName={pathname.length > 0}>
+                    <h4>{item.label}</h4>
                   </MenuItem>
                 </Link>
               )}
