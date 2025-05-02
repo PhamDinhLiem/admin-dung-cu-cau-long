@@ -7,4 +7,8 @@ export const CarouselWrapper = styled.div`
   img {
     width: 100%;
   }
+
+  button {
+    bottom: 2px !important; 
+  }
 `;
