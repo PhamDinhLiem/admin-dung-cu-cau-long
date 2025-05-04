@@ -1,9 +1,7 @@
-import BlogsScreen from "@/screens/blogs";
-
 interface BlogPageProps {}
 
-const BlogPage = ({}: BlogPageProps) => {
-  return <BlogsScreen />;
+const BlogHomePage = ({}: BlogPageProps) => {
+  return <div></div>;
 };
 
-export default BlogPage;
+export default BlogHomePage;
