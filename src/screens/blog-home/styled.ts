@@ -7,3 +7,5 @@ export const BlogHomeScreenWrapper = styled.div`
   padding-top: 20px;
   width: 100%;
 `;
+
+export const AboutBlockWrapper = styled.div``;

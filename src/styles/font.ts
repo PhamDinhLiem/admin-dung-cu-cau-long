@@ -9,7 +9,7 @@ export const headingBlogFont = localFont({
   ],
   display: "swap",
   preload: true,
-  variable: "--tanHiepHeading-big-font",
+  variable: "--blog-big-font",
 });
 
 export const mediumHeadingBlogFont = localFont({
@@ -20,7 +20,7 @@ export const mediumHeadingBlogFont = localFont({
   ],
   display: "swap",
   preload: true,
-  variable: "--tanHiepHeading-medium-font",
+  variable: "--blog-medium-font",
 });
 
 export const ParagraphBlogFont = localFont({
@@ -34,5 +34,5 @@ export const ParagraphBlogFont = localFont({
   ],
   display: "swap",
   preload: true,
-  variable: "--tanHiepParagraphFont-font",
+  variable: "--blog-paragraph-font",
 });

@@ -67,12 +67,16 @@ export const BlogsStyle = css`
 
   h1,
   h2 {
-    font-family: var(--tanHiepHeading-big-font) !important;
+    font-family: var(--blog-big-font) !important;
   }
 
   h3,
   h4 {
-    font-family: var(--tanHiepHeading-medium-font) !important;
+    font-family: var(--blog-medium-font) !important;
+  }
+
+  p {
+    font-family: var(--blog-medium-font) !important;
   }
 
   :root {
