@@ -1,8 +1,8 @@
 "use client";
 
+import LayoutBlogs from "@/components/layout-blog";
 import LayoutHome from "@/components/layout-home";
 import AppContext from "@/contexts/app";
-import LayoutBlogs from "@/screens/blogs/components/layouts/LayoutBlogs";
 import { usePathname } from "next/navigation";
 import { Fragment, ReactNode, useContext, useEffect, useMemo } from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";

@@ -8,7 +8,7 @@ interface SliderProps {
   sliderType: string;
 }
 
-const FakeDataNews = [
+const fakeDataNews = [
   {
     title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
     content:
@@ -43,8 +43,8 @@ const SliderContentVer1 = () => {
   return (
     <SliderContentVer1Wrapper>
       <CarouselCustom>
-        {FakeDataNews.map((news, index) => (
-          <div key={index}>
+        {fakeDataNews.map((news, index) => (
+          <div className="flex flex-col py-11 gap-2" key={index}>
             <h1 className="text-white">{news.title}</h1>
             <hr />
             <h4 className="text-white">{news.content}</h4>

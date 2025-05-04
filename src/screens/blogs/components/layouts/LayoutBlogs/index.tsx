@@ -1,9 +1,7 @@
 import React from "react";
-
 import Sidebar from "../components/Sidebar";
 import { LayoutBlogsWrapper } from "./styled";
 import Header from "@/components/header";
-import Banner from "@/components/banner";
 import BlogBanner from "@/components/customBanner";
 
 export default function LayoutBlogs({ children }: any) {

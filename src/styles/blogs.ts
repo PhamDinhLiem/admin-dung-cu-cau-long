@@ -65,6 +65,16 @@ export const BlogsStyle = css`
     --hover-color: #d3b062;
   }
 
+  h1,
+  h2 {
+    font-family: var(--tanHiepHeading-big-font) !important;
+  }
+
+  h3,
+  h4 {
+    font-family: var(--tanHiepHeading-medium-font) !important;
+  }
+
   :root {
     --swiper-navigation-size: 44px;
   }

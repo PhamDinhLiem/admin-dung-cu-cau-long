@@ -3,7 +3,6 @@ import { ensureStartsWith } from "@/utils";
 import { ReactNode } from "react";
 import StyledComponentsRegistry from "../../lib/registry";
 import "../../src/styles/global.css";
-import Script from "next/script";
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL

@@ -1,7 +1,7 @@
 //file này để export font thôi
 import localFont from "next/font/local";
 
-export const tanHiepBigHeadingBlogFont = localFont({
+export const headingBlogFont = localFont({
   src: [
     {
       path: "../../public/fonts/CheltenhamStdUltra.otf",
@@ -12,7 +12,7 @@ export const tanHiepBigHeadingBlogFont = localFont({
   variable: "--tanHiepHeading-big-font",
 });
 
-export const tanHiepMediumHeadingBlogFont = localFont({
+export const mediumHeadingBlogFont = localFont({
   src: [
     {
       path: "../../public/fonts/CheltenhamStdLight.otf",
@@ -23,7 +23,7 @@ export const tanHiepMediumHeadingBlogFont = localFont({
   variable: "--tanHiepHeading-medium-font",
 });
 
-export const tanHiepParagraphFont = localFont({
+export const ParagraphBlogFont = localFont({
   src: [
     {
       path: "../../public/fonts/franklin-normal-300.woff2",

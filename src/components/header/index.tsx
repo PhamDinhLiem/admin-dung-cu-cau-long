@@ -11,8 +11,6 @@ import { useContext, useEffect, useRef, useState } from "react";
 import HeaderDesktop from "./header-desktop";
 import HeaderMobile from "./header-mobile";
 import { HeaderWrapper } from "./styled";
-import TanHiepBlog from "@/app/tanHiepblog/page";
-import { tanHiepBigHeadingBlogFont, tanHiepMediumHeadingBlogFont } from "@/styles/font";
 
 interface HeaderProps {}
 
@@ -140,7 +138,7 @@ const Header = () => {
   });
 
   return (
-    <HeaderWrapper className={`${tanHiepBigHeadingBlogFont.variable} ${tanHiepMediumHeadingBlogFont.variable}`}>
+    <HeaderWrapper>
       <HeaderDesktop data={listMenuTanHiepBlog} showInput={showInput} setShowInput={setShowInput} />
       <HeaderMobile data={listMenuTanHiepBlog} showInput={showInput} setShowInput={setShowInput} />
     </HeaderWrapper>
