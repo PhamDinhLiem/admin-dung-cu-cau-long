@@ -15,7 +15,7 @@ const ReadMoreButton = ({ link }: ReadMoreButtonProps) => {
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
-          className="h-6 w-6 text-orange-500 -ml-[8px]"
+          className="h-5 w-5 text-orange-500 -ml-[8px]"
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 6l6 6-6 6" />
         </svg>

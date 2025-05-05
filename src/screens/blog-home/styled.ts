@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const BlogHomeScreenWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding-left: 4%;
   padding-right: 4%;
   padding-top: 20px;
@@ -9,3 +10,4 @@ export const BlogHomeScreenWrapper = styled.div`
 `;
 
 export const AboutBlockWrapper = styled.div``;
+export const ContactBlockWrapper = styled.div``;

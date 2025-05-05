@@ -3,6 +3,7 @@ import Header from "@/components/header";
 import BlogBanner from "@/components/customBanner";
 import { BlockContentWrapper, LayoutBlogsWrapper } from "./styled";
 import { headingBlogFont, mediumHeadingBlogFont } from "@/styles/font";
+import { Footer } from "../footer";
 
 export default function LayoutBlogs({ children }: any) {
   return (
@@ -11,6 +12,7 @@ export default function LayoutBlogs({ children }: any) {
         <Header />
         <BlogBanner />
         <BlockContentWrapper>{children}</BlockContentWrapper>
+        <Footer />
       </div>
     </LayoutBlogsWrapper>
   );
