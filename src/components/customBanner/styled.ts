@@ -8,9 +8,11 @@ export const BlogBannerWrapper = styled.div`
   margin-top: 0px;
   height: 400px;
 
+  .absolute-black {
+    background-color: black;
+  }
   img {
     height: 100%;
-    width: 100%;
     object-fit: cover;
   }
 `;

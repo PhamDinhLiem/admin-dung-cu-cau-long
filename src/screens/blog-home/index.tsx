@@ -29,7 +29,7 @@ const BlogHomeScreen = () => {
           <h2 className="mb-9">Contact me</h2>
           <div className="flex flex-col">
             <div className="flex gap-1">
-              <p className="font-bold text-[17px] mb-1">Email</p>
+              <p className="font-bold text-[17px]">Email</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

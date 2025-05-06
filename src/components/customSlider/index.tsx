@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { BlogSliderWrapper, SliderContentVer1Wrapper } from "./styled";
+import { BlogSliderWrapper, SliderContentVer1Wrapper, SliderContentVer2Wrapper } from "./styled";
 import CarouselCustom from "../carousel";
 
 interface SliderProps {
-  sliderType: string;
+  page?: string;
 }
 
 const fakeDataNews = [
@@ -24,33 +24,33 @@ const fakeDataNews = [
   },
 ];
 
-const handleSliderContent = (sliderType: string) => {
-  switch (sliderType) {
-    case "ver1":
-      return <SliderContentVer1 />;
-    default:
-      return null;
-  }
-};
-
-const BlogSlider: React.FC<SliderProps> = ({ sliderType }) => {
-  return <BlogSliderWrapper>{handleSliderContent(sliderType)}</BlogSliderWrapper>;
-};
-
-export default BlogSlider;
-
-const SliderContentVer1 = () => {
+export const SliderContentVer1 = () => {
   return (
-    <SliderContentVer1Wrapper>
-      <CarouselCustom>
-        {fakeDataNews.map((news, index) => (
-          <div className="flex flex-col py-11 gap-2" key={index}>
-            <h1 className="text-white">{news.title}</h1>
-            <hr />
-            <h4 className="text-white">{news.content}</h4>
-          </div>
-        ))}
-      </CarouselCustom>
-    </SliderContentVer1Wrapper>
+    <BlogSliderWrapper>
+      <SliderContentVer1Wrapper className="w-full">
+        <CarouselCustom>
+          {fakeDataNews.map((news, index) => (
+            <div className="flex flex-col pt-20 gap-2 h-[300px]" key={index}>
+              <h1 className="text-white text-[32px]">{news.title}</h1>
+              <hr />
+              <h4 className="text-white">{news.content}</h4>
+            </div>
+          ))}
+        </CarouselCustom>
+      </SliderContentVer1Wrapper>
+    </BlogSliderWrapper>
+  );
+};
+
+//Slider cho các trang about
+export const SliderContentVer2 = ({ page }: SliderProps) => {
+  return (
+    <BlogSliderWrapper>
+      <SliderContentVer2Wrapper className="flex flex-col pt-20 gap-4 h-[300px]">
+        <h1 className="text-white text-[32px]">BlackRock TCP Capital Corp. (Nasdaq: TCPC)</h1>
+        <hr />
+        <h1 className="text-white ">{page}</h1>
+      </SliderContentVer2Wrapper>
+    </BlogSliderWrapper>
   );
 };

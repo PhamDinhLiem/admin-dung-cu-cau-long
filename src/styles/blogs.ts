@@ -1,4 +1,10 @@
-import { css } from "styled-components";
+import { css, styled } from "styled-components";
+
+export const ContainerBlog = styled.div`
+  padding-left: 4%;
+  padding-right: 4%;
+  width: 100%;
+`;
 
 export const BlogsStyle = css`
   html,
