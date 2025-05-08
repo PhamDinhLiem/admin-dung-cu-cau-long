@@ -4,10 +4,11 @@ export const FooterWrapper = styled.div`
   background-color: black;
   width: 100%;
   padding-top: 64px;
-  padding-bottom: 64px;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: center;
   color: white;
+  line-height: 24px;
 
   p {
     font-size: 15px;
@@ -17,6 +18,8 @@ export const FooterWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 28px;
+    width: 100%;
+    max-width: 1080px;
   }
 
   .footer_subcontent {

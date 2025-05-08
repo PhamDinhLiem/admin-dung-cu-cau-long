@@ -21,6 +21,7 @@ export const DropDownWrapper = styled.div<{ show: boolean }>`
   h3,
   h4 {
     cursor: pointer !important;
+    font-size: 16px;
   }
 `;
 
@@ -37,7 +38,7 @@ export const ButtonItem = styled(Link)`
   }
   p {
     font-weight: 500;
-    padding: 14px;
+    padding: 5px;
   }
 
   h5,

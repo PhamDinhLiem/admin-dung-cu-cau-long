@@ -27,8 +27,8 @@ const Header = () => {
   });
 
   const listMenuTanHiepBlog: LinkProps[] = [
-    { value: "home", label: "Home", href: "/blogs", type: "link" },
-    { value: "about", label: "About", href: "/about", type: "link" },
+    { value: "home", label: "Home", href: "/blog", type: "link" },
+    { value: "about", label: "About", href: "/blog/about", type: "link" },
     {
       value: "personal",
       label: "Personal",
@@ -54,7 +54,7 @@ const Header = () => {
         { value: "instagram", label: "Instagram", href: "/personal/market", type: "link" },
       ],
     },
-    { value: "contact", label: "Contact", href: "/contact", type: "link" },
+    { value: "contact", label: "Contact", href: "/blog/contact", type: "link" },
   ];
 
   const listMenu: LinkProps[] = [

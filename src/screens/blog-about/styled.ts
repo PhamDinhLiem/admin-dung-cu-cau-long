@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const BlogAboutScreenWrapper = styled.div`
   display: flex;
   gap: 40px;
-  padding-left: 5%;
-  padding-right: 5%;
+  max-width: 1200px;
 
   .img-content {
     padding-top: 52px;

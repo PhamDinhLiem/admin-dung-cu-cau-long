@@ -1,15 +1,17 @@
 "use Client";
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BlogBannerWrapper } from "./styled";
 import { usePathname } from "next/navigation";
 import { SliderContentVer1, SliderContentVer2 } from "../customSlider";
+import AppContext from "@/contexts/app";
 
 interface BannerProps {}
 
 const BlogBanner = ({}: BannerProps) => {
   const pathName = usePathname();
   const [Banner, setBanner] = useState<React.ComponentType<any> | null>(null); // Correct type for React components
+  const { plHeader } = useContext(AppContext);
 
   // Tạo một component hợp lệ dựa trên pathName
   const handleBanner = (pathName: string) => {
@@ -31,16 +33,30 @@ const BlogBanner = ({}: BannerProps) => {
     }
   };
 
+  const handlePLBanner = () => {
+    const blogBanner = document.querySelector(".blog-content") as HTMLElement;
+    if (blogBanner && plHeader) {
+      blogBanner.style.paddingLeft = `${plHeader}`;
+    }
+    console.log(blogBanner);
+  };
+
   useEffect(() => {
     if (pathName) {
       handleBanner(pathName);
     }
   }, [pathName]);
 
+  useEffect(() => {
+    if (plHeader) {
+      handlePLBanner();
+    }
+  }, [plHeader]);
+
   return (
     <BlogBannerWrapper>
       <div className="w-full flex">
-        <div className="w-1/2 absolute-black">
+        <div className="w-1/2 absolute-black blog-content">
           {/* Render the Banner component only if it's set */}
           {Banner && <Banner />}
         </div>

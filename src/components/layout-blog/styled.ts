@@ -5,6 +5,8 @@ export const LayoutBlogsWrapper = styled.div`
 `;
 
 export const BlockContentWrapper = styled.div`
-  padding-top: 16px;
-  padding-bottom: 24px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
 `;

@@ -31,9 +31,9 @@ export const SliderContentVer1 = () => {
         <CarouselCustom>
           {fakeDataNews.map((news, index) => (
             <div className="flex flex-col pt-20 gap-2 h-[300px]" key={index}>
-              <h1 className="text-white text-[32px]">{news.title}</h1>
+              <h1 className="text-white text-[40px]">{news.title}</h1>
               <hr />
-              <h4 className="text-white">{news.content}</h4>
+              <h1 className="text-white text-[32px]">{news.content}</h1>
             </div>
           ))}
         </CarouselCustom>
@@ -46,7 +46,7 @@ export const SliderContentVer1 = () => {
 export const SliderContentVer2 = ({ page }: SliderProps) => {
   return (
     <BlogSliderWrapper>
-      <SliderContentVer2Wrapper className="flex flex-col pt-20 gap-4 h-[300px]">
+      <SliderContentVer2Wrapper className="flex flex-col pt-20 gap-4 h-[300px] justify-center">
         <h1 className="text-white text-[32px]">BlackRock TCP Capital Corp. (Nasdaq: TCPC)</h1>
         <hr />
         <h1 className="text-white ">{page}</h1>

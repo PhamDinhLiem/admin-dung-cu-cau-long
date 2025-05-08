@@ -12,7 +12,7 @@ export function Footer() {
   const [email, setEmail] = useState<string>("");
   return (
     <FooterWrapper>
-      <footer className="layout_footer flex flex-col justify-center">
+      <footer className="layout_footer flex flex-col justify-center w-full max-w-[1080px] px-[30px]">
         <div className="footer_iner footer_content">
           <InvestorContactContentWrapper>
             <h4 className="font-bold">Investor Contact</h4>
@@ -63,18 +63,18 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
               />
-              <CustomButton classname={"h-full w-[100px] bg-white px-4 rounded-sm"}>
+              <CustomButton classname={"h-full w-[120px] bg-white px-4 rounded-sm flex items-center"}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="2.5"
+                  stroke-width="2"
                   stroke="currentColor"
-                  className="size-7 text-orange-500  "
+                  className="size-5 text-orange-500  "
                 >
                   <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
-                <p className="text-black font-bold">SUBMIT</p>
+                <p className="text-black mt-1 font-bold ">SUBMIT</p>
               </CustomButton>
             </div>
             <div className="checkout_section gap-1 mt-5">

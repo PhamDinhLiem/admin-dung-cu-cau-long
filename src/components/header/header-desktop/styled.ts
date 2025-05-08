@@ -14,6 +14,11 @@ export const HeaderDesktopContent = styled(Container)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: 3%;
+  margin-right: 20px;
+  max-width: 1240px;
 
   @media ${device.mobile} {
     padding: 8px 16px;
@@ -41,20 +46,9 @@ export const MenuItem = styled.div<{ $active: boolean; $isHavePathName?: boolean
   cursor: pointer;
   position: relative;
 
-  p {
-    font-weight: 700;
-    font-family: var(--font-lora) !important;
-
-    position: relative;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-    color: ${({ theme, $active, $isHavePathName }) =>
-      $active ? theme.color.status.yellow : $isHavePathName ? theme.color.status.white : theme.color.text.body};
-  }
-
   h3,
   h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   h1,

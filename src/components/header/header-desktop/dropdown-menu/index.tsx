@@ -25,10 +25,16 @@ const DropdownMenu = ({ value, data, onChange, title, showDropdown, setShow }: a
 
   const dropDown = useMemo(
     () => (
-      <DropDownWrapper show={Boolean(showDropdown == value)} ref={dropdownRef}>
+      <DropDownWrapper
+        onMouseOver={(e) => {
+          setShow(value);
+        }}
+        show={Boolean(showDropdown == value)}
+        ref={dropdownRef}
+      >
         {map(data, (d) => (
           <ButtonItem key={d.value} href={`${d.href}`}>
-            <h5 className="body-2">{d.label}</h5>
+            <p className="body-2 cursor-pointer">{d.label}</p>
           </ButtonItem>
         ))}
       </DropDownWrapper>
@@ -39,14 +45,14 @@ const DropdownMenu = ({ value, data, onChange, title, showDropdown, setShow }: a
   return (
     <SelectWrapper ref={ref}>
       <WrapperTitle show={showDropdown == value}>
-        <h4
-          className="text-lg"
-          onClick={(e) => {
+        <p
+          className="text-lg text-gray-500 cursor-pointer"
+          onMouseOver={(e) => {
             setShow(value);
           }}
         >
           {title}
-        </h4>
+        </p>
         <ButtonIcon>
           <IconDropdownExpend />
         </ButtonIcon>

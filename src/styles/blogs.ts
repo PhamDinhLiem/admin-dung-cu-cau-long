@@ -73,16 +73,16 @@ export const BlogsStyle = css`
 
   h1,
   h2 {
-    font-family: var(--blog-big-font) !important;
+    font-family: var(--blogBlk-extra-font) !important;
   }
 
   h3,
   h4 {
-    font-family: var(--blog-medium-font) !important;
+    font-family: var(--blogBlk-bold-font) !important;
   }
 
   p {
-    font-family: var(--blog-medium-font) !important;
+    font-family: var(--blogBlk-medium-font) !important;
   }
 
   :root {

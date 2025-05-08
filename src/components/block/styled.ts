@@ -38,7 +38,6 @@ export const BlockHeader = styled.div`
 export const BlockContent = styled.div`
   background-color: #f4f4f4;
   padding: 14px;
-
   margin: 10px;
 
   border-radius: 16px;
