@@ -85,6 +85,10 @@ export const BlogsStyle = css`
     font-family: var(--blogBlk-medium-font) !important;
   }
 
+  input {
+    font-family: var(--blogBlk-medium-font) !important;
+  }
+
   :root {
     --swiper-navigation-size: 44px;
   }

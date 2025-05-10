@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const BlogHomeScreenWrapper = styled.div`
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;

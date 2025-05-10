@@ -38,7 +38,6 @@ const BlogBanner = ({}: BannerProps) => {
     if (blogBanner && plHeader) {
       blogBanner.style.paddingLeft = `${plHeader}`;
     }
-    console.log(blogBanner);
   };
 
   useEffect(() => {
