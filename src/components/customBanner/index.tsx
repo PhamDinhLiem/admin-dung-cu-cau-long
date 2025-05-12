@@ -27,6 +27,10 @@ const BlogBanner = ({}: BannerProps) => {
         // eslint-disable-next-line react/display-name
         setBanner(() => () => <SliderContentVer2 page="Contact Me" />);
         break;
+      case "/blog/personal":
+        // eslint-disable-next-line react/display-name
+        setBanner(() => () => <SliderContentVer2 page="Personal" />);
+        break;
       default:
         // eslint-disable-next-line react/display-name
         setBanner(() => () => <SliderContentVer2 page="Not valid page" />); // Default to null if no match

@@ -8,6 +8,51 @@ export const PersonHeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   background-color: rgb(255, 206, 0);
+
+  .appear-animation {
+    animation: fadeIN 0.5s ease-in-out;
+  }
+
+  .bigger-animation {
+    animation: emBroaden 0.7s ease-in-out;
+  }
+
+  .bigger-animation2 {
+    animation: emBroaden2 0.7s ease-in-out;
+  }
+
+  h2 {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+
+  @keyframes fadeIN {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes emBroaden {
+    0% {
+      height: 52px;
+    }
+    100% {
+      height: 64px;
+    }
+  }
+
+  @keyframes emBroaden2 {
+    0% {
+      max-width: 1200px;
+    }
+    100% {
+      max-width: 1040px;
+    }
+  }
 `;
 
 export const PersonalMenuItem = styled.div<{ $active: boolean; $isHavePathName?: boolean }>`

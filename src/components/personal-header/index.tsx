@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PersonalMenuItem, PersonHeaderWrapper } from "./styled";
-import { head } from "lodash";
 
 interface PersonaHeaderProps {
   slug?: string;
@@ -47,28 +46,45 @@ const PersonalMenu = [
 ];
 
 const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
-  const [scrollPoint, setScrollPoint] = useState(0);
-  //sửa hàm này
-  const handleScrollTop = () => {
-    const header = document.querySelector(".header-content") as HTMLElement;
-    const headerPostion = header.style.position;
-    console.log(headerPostion);
-  };
+  const PersonHeaderRef = useRef<HTMLDivElement>(null);
+  const rectTop = PersonHeaderRef.current?.getBoundingClientRect().top!;
+  const [scrollPoint, setScrollPoint] = useState<number>(0);
 
   useEffect(() => {
-    console.log(scrollPoint);
-    handleScrollTop();
+    const handleScroll = () => {
+      setScrollPoint(window.scrollY);
+      console.log("scrollPoint", scrollPoint);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [scrollPoint]);
 
   return (
-    <PersonHeaderWrapper>
-      <div className="flex max-w-[1080px] h-[52px] w-full header-content">
-        {PersonalMenu.map((perMenu, index) => (
-          <PersonalMenuItem key={index} $active $isHavePathName>
-            <p>{perMenu.title}</p>
-          </PersonalMenuItem>
-        ))}
-      </div>
+    <PersonHeaderWrapper ref={PersonHeaderRef}>
+      {rectTop == 0 && rectTop != undefined ? (
+        <div className="flex w-full h-[64px] bigger-animation justify-center relative items-center header-content">
+          <h2 className="appear-animation absolute ">TanHiep</h2>
+          <div className="max-w-[1040px] w-full flex justify-between items-center bigger-animation2 ">
+            {PersonalMenu.map((perMenu, index) => (
+              <PersonalMenuItem key={index} $active $isHavePathName>
+                <p className="text-[18px]">{perMenu.title}</p>
+              </PersonalMenuItem>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="flex max-w-[1200px] h-[52px] w-full header-content">
+          {PersonalMenu.map((perMenu, index) => (
+            <PersonalMenuItem key={index} $active $isHavePathName>
+              <p>{perMenu.title}</p>
+            </PersonalMenuItem>
+          ))}
+        </div>
+      )}
     </PersonHeaderWrapper>
   );
 };
