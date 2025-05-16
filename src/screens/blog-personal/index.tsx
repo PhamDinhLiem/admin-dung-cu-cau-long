@@ -8,6 +8,8 @@ import BlogPersonalLatestNews from "../blog-personal-latest-news";
 import BlogPersonalBusiness from "../blog-personal-business";
 import AppContext from "@/contexts/app";
 import BlogPersonalResources from "../blog-personal-resources";
+import BlogPersonalLifeStyle from "../blog-personal-lifestyle";
+import BlogPersonalEducation from "../blog-personal-education";
 
 const BlogPersonalScreen = () => {
   const { personalState } = useContext(AppContext);
@@ -22,11 +24,11 @@ const BlogPersonalScreen = () => {
       case "Business":
         return BlogPersonalBusiness;
       case "Market":
-        return BlogPersonalBusiness;
+        return BlogPersonalBusiness; // để tạm
       case "Education":
-        return BlogPersonalBusiness;
+        return BlogPersonalEducation;
       case "LifeStyle":
-        return BlogPersonalBusiness;
+        return BlogPersonalLifeStyle;
       case "Resources":
         return BlogPersonalResources;
     }

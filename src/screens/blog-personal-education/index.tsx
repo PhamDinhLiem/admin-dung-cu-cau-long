@@ -1,24 +1,24 @@
 import CommonContainer from "@/components/common-container";
-import { BlogBusinessScreenContent, BlogBusinessScreenWrapper } from "./styled";
+import { BlogEducationScreenContent, BlogEducationScreenWrapper } from "./styled";
 
-const BusinessCategory = {
-  title: "Business",
+const EducationCategory = {
+  title: "Education",
   description:
     'The Board of Directors of BlackRock TCP Capital Corp. (the "Company") sets high standards for the Company and for its officers. To fulfill its responsibilities and to discharge its duty, the Board of Directors follows the procedures and standards that are set forth in these guidelines. These guidelines are subject to modification from time to time as the Board of Directors deems appropriate and as required by applicable laws and regulations.',
-  subCategories: ["Finance", "Economy", "Tech", "Stock", "Crypto"],
+  subCategories: ["Research", "Reporting", "Publications", "Teaching", "Students"],
 };
 
-const BlogPersonalBusiness = () => {
+const BlogPersonalEducation = () => {
   return (
-    <BlogBusinessScreenWrapper>
-      <BlogBusinessScreenContent>
+    <BlogEducationScreenWrapper>
+      <BlogEducationScreenContent>
         <CommonContainer
-          title={BusinessCategory.title}
-          subCategorys={BusinessCategory.subCategories}
-          description={BusinessCategory.description}
+          title={EducationCategory.title}
+          subCategorys={EducationCategory.subCategories}
+          description={EducationCategory.description}
         />
-      </BlogBusinessScreenContent>
-    </BlogBusinessScreenWrapper>
+      </BlogEducationScreenContent>
+    </BlogEducationScreenWrapper>
   );
 };
-export default BlogPersonalBusiness;
+export default BlogPersonalEducation;
