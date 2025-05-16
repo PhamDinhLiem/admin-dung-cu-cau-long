@@ -5,8 +5,11 @@ export const BlogAboutScreenWrapper = styled.div`
   padding-bottom: 80px;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   .img-content {
     padding-top: 52px;
   }
 `;
+
+export const BlogAboutContentWrapper = styled.div``;

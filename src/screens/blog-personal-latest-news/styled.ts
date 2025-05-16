@@ -10,11 +10,16 @@ export const BlogLatestNewsScreenWrapper = styled.div`
 export const BlogLatestNewsScreenContent = styled.div`
   padding-top: 80px;
   padding-bottom: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  padding-right: 30px;
-  padding-left: 30px;
   max-width: 1080px;
-  gap: 30px;
+  min-height: 600px;
+`;
+
+export const BlogLatestNewsScreenBlock = styled.div`
+ display: flex;
+ flex-direction: column;
+ gap: 15px;
+ padding-bottom: 15px;
+ padding-top: 15px;
+ border-bottom: 0.1px solid gray;
 `;

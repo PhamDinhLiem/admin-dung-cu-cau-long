@@ -12,6 +12,8 @@ const AppContext = createContext<{
   setTopics?: any;
   plHeader?: string;
   setPlHeader?: any;
+  personalState?: string;
+  setpersonalState?: any;
 }>({
   loading: false,
 });
@@ -22,9 +24,22 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [initJs, setInitJs] = useState<boolean>();
   const [topics, setTopics] = useState([]);
   const [plHeader, setPlHeader] = useState<string>(); //state này để biết lấy được pl của Header từ đó render ra plBanner cho thẳng hàng
-
+  const [personalState, setpersonalState] = useState<string>("Overview"); // state này cho personal header
   return (
-    <AppContext.Provider value={{ loading, setLoading, topics, setTopics, initJs, setInitJs, plHeader, setPlHeader }}>
+    <AppContext.Provider
+      value={{
+        loading,
+        setLoading,
+        topics,
+        setTopics,
+        initJs,
+        setInitJs,
+        plHeader,
+        setPlHeader,
+        personalState,
+        setpersonalState,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

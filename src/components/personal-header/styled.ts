@@ -21,9 +21,13 @@ export const PersonHeaderWrapper = styled.div`
     animation: emBroaden2 0.7s ease-in-out;
   }
 
+  .bg-focus {
+    background-color: rgb(204, 165, 0);
+  }
+
   h2 {
     top: 50%;
-    left: 20px;
+    left: 50px;
     transform: translateY(-50%);
   }
 
@@ -47,7 +51,7 @@ export const PersonHeaderWrapper = styled.div`
 
   @keyframes emBroaden2 {
     0% {
-      max-width: 1200px;
+      max-width: 1140px;
     }
     100% {
       max-width: 1040px;
@@ -55,7 +59,7 @@ export const PersonHeaderWrapper = styled.div`
   }
 `;
 
-export const PersonalMenuItem = styled.div<{ $active: boolean; $isHavePathName?: boolean }>`
+export const PersonalMenuItem = styled.div<{ $isHavePathName?: boolean }>`
   cursor: pointer;
   height: 52px;
   flex-grow: 1;

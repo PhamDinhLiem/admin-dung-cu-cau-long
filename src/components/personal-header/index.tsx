@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { PersonalMenuItem, PersonHeaderWrapper } from "./styled";
+import AppContext from "@/contexts/app";
 
 interface PersonaHeaderProps {
   slug?: string;
@@ -49,11 +50,13 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
   const PersonHeaderRef = useRef<HTMLDivElement>(null);
   const rectTop = PersonHeaderRef.current?.getBoundingClientRect().top!;
   const [scrollPoint, setScrollPoint] = useState<number>(0);
+  const { personalState, setpersonalState } = useContext(AppContext);
+
+  console.log(personalState);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollPoint(window.scrollY);
-      console.log("scrollPoint", scrollPoint);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -70,16 +73,30 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
           <h2 className="appear-animation absolute ">TanHiep</h2>
           <div className="max-w-[1040px] w-full flex justify-between items-center bigger-animation2 ">
             {PersonalMenu.map((perMenu, index) => (
-              <PersonalMenuItem key={index} $active $isHavePathName>
+              <PersonalMenuItem
+                key={index}
+                className={perMenu.title == personalState ? `bg-focus` : ``}
+                onClick={(e) => {
+                  e.preventDefault;
+                  setpersonalState(perMenu.title);
+                }}
+              >
                 <p className="text-[18px]">{perMenu.title}</p>
               </PersonalMenuItem>
             ))}
           </div>
         </div>
       ) : (
-        <div className="flex max-w-[1200px] h-[52px] w-full header-content">
+        <div className="flex max-w-[1140px] h-[52px] w-full header-content">
           {PersonalMenu.map((perMenu, index) => (
-            <PersonalMenuItem key={index} $active $isHavePathName>
+            <PersonalMenuItem
+              key={index}
+              className={perMenu.title == personalState ? `bg-focus` : ``}
+              onClick={(e) => {
+                e.preventDefault;
+                setpersonalState(perMenu.title);
+              }}
+            >
               <p>{perMenu.title}</p>
             </PersonalMenuItem>
           ))}
