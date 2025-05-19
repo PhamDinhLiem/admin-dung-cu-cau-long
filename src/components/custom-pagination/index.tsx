@@ -7,7 +7,7 @@ interface PaginationProps {
   totalPosts: number; // tổng số bài viết
   setCurrentPage: Function; // hàm chuyển trang
   currentPage: number; // trang hiện tại
-  filterYear: string; // năm đang được lọc
+  filterYear?: string; // năm đang được lọc
 }
 
 const CustomPagination = ({ totalPosts, setCurrentPage, currentPage, filterYear }: PaginationProps) => {

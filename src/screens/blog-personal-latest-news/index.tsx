@@ -74,17 +74,17 @@ const getFilterYear = (newsData: NewsDataProps[]): string[] => {
 };
 
 const BlogPersonalLatestNews = () => {
-  const [years, setYear] = useState<string[]>([]);
+  const [years, setYear] = useState<string[]>(getFilterYear(fakeDataNews));
   const [currentNewPage, setCurrentNewPage] = useState<NewsDataProps[]>([]);
   const [blogNews, setBlogNews] = useState<NewsDataProps[]>([]);
   const [filterYear, setFilterYear] = useState<string>(years[0]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+
   ///useEffect này để get các giá trị năm cho chức năng filter sau
   useEffect(() => {
     const selectYears = getFilterYear(fakeDataNews);
     setYear(selectYears);
   }, []);
-
   ///
   useEffect(() => {
     const lastPostIndex = currentPage * 3;
@@ -108,9 +108,7 @@ const BlogPersonalLatestNews = () => {
           <p>Year:</p>
           <select
             className="px-2 rounded-none py-1 font-light"
-            onChange={(e) => {
-              setFilterYear(e.target.value);
-            }}
+            onChange={(e) => setFilterYear(e.target.value)}
             value={filterYear}
           >
             {years.map((year, index) => (

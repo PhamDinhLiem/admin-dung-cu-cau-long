@@ -16,7 +16,7 @@ export function Footer() {
         <div className="footer_iner footer_content">
           <InvestorContactContentWrapper>
             <h4 className="font-bold">Investor Contact</h4>
-            <p className="mt-3">Nguyen Tan Hiep</p>
+            <p className="mt-3">Miracle Invesment</p>
             <p>Investor Relations</p>
             <div className="flex gap-1 items-center mt-3">
               <svg
@@ -89,7 +89,7 @@ export function Footer() {
             </div>
           </EmailContentWrapper>
           <MangageContentWrapper className="pl-[40px]">
-            <h2 className="font-bold">Tan Hiep </h2>
+            <h2 className="font-bold">Miracle </h2>
             <p className="mt-3 font-semibold">Manage Cookies</p>
           </MangageContentWrapper>
         </div>

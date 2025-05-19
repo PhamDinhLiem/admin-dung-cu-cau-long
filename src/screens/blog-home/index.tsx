@@ -13,7 +13,7 @@ const BlogHomeScreen = () => {
         {/**Phần block about */}
         <AboutBlockWrapper>
           <BlockBorderTop pt="20px">
-            <h2 className="mb-9">About me</h2>
+            <h2 className="mb-9">About </h2>
             <p className="mb-5 text-[15px]">
               BlackRock TCP Capital Corp. is an externally-managed specialty finance company focused on middle-market
               lending. We have elected to be regulated as a business development company, or BDC, under the Investment
@@ -27,7 +27,7 @@ const BlogHomeScreen = () => {
         {/**Phần block Contact */}
         <ContactBlockWrapper>
           <BlockBorderTop pt="20px">
-            <h2 className="mb-9">Contact me</h2>
+            <h2 className="mb-9">Contact </h2>
             <div className="flex flex-col">
               <div className="flex gap-1">
                 <p className="font-bold text-[17px]">Email</p>

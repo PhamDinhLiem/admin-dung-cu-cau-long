@@ -10,16 +10,16 @@ interface SliderProps {
 
 const fakeDataNews = [
   {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
+    title: "Miracle TCP Capital Corp. (Nasdaq: TCPC)",
     content:
       "Long-term relationships with borrowers and deal sources who rely on our deep industry knowledge and in-house legal expertise",
   },
   {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
+    title: "Miracle TCP Capital Corp. (Nasdaq: TCPC)",
     content: "More than 20 years of experience investing in private credit through multiple market cycles",
   },
   {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
+    title: "Miracle TCP Capital Corp. (Nasdaq: TCPC)",
     content: "More than 20 years of experience investing in private credit through multiple market cycles",
   },
 ];
@@ -47,7 +47,7 @@ export const SliderContentVer2 = ({ page }: SliderProps) => {
   return (
     <BlogSliderWrapper>
       <SliderContentVer2Wrapper className="flex flex-col pt-20 gap-4 h-[300px] justify-center">
-        <h1 className="text-white text-[32px]">BlackRock TCP Capital Corp. (Nasdaq: TCPC)</h1>
+        <h1 className="text-white text-[32px]">Miracle TCP Capital Corp. (Nasdaq: TCPC)</h1>
         <hr />
         <h1 className="text-white ">{page}</h1>
       </SliderContentVer2Wrapper>

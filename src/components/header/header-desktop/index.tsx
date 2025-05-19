@@ -40,7 +40,7 @@ const HeaderDesktop = ({ data, showInput, setShowInput }: HeaderProps) => {
       <HeaderDesktopContent>
         <Flex>
           <Link href={"/"}>
-            <h2 className="text-[30px]">TanHiep</h2>
+            <h2 className="text-[30px]">Miracle</h2>
           </Link>
         </Flex>
         {/* showInput ? <HeaderInput setShowInput={setShowInput} /> : <div></div>*/}

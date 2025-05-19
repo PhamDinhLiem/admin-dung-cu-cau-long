@@ -10,7 +10,7 @@ interface BannerProps {}
 
 const BlogBanner = ({}: BannerProps) => {
   const pathName = usePathname();
-  const [Banner, setBanner] = useState<React.ComponentType<any> | null>(null); // Correct type for React components
+  const [Banner, setBanner] = useState<React.ComponentType<any> | null>(null);
   const { plHeader } = useContext(AppContext);
 
   // Tạo một component hợp lệ dựa trên pathName

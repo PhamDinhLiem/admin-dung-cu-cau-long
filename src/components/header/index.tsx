@@ -26,7 +26,7 @@ const Header = () => {
     fetchPolicy: "network-only",
   });
 
-  const listMenuTanHiepBlog: LinkProps[] = [
+  const listMenuBlog: LinkProps[] = [
     { value: "home", label: "Home", href: "/blog", type: "link" },
     { value: "about", label: "About", href: "/blog/about", type: "link" },
     {
@@ -139,8 +139,8 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <HeaderDesktop data={listMenuTanHiepBlog} showInput={showInput} setShowInput={setShowInput} />
-      <HeaderMobile data={listMenuTanHiepBlog} showInput={showInput} setShowInput={setShowInput} />
+      <HeaderDesktop data={listMenuBlog} showInput={showInput} setShowInput={setShowInput} />
+      <HeaderMobile data={listMenuBlog} showInput={showInput} setShowInput={setShowInput} />
     </HeaderWrapper>
   );
 };

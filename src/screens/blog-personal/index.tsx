@@ -14,7 +14,7 @@ import BlogPersonalEducation from "../blog-personal-education";
 const BlogPersonalScreen = () => {
   const { personalState } = useContext(AppContext);
 
-  //Render component dựa vào title
+  //Render
   const BlogPersonal = useMemo(() => {
     switch (personalState) {
       case "Overview":

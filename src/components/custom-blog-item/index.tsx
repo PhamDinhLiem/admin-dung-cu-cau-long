@@ -1,8 +1,5 @@
 import { BlogOutput, IResponse } from "@/@custom-types/graphql";
 import { getMediaData } from "@/utils";
-import Button from "../button";
-import LineDate from "../line-date";
-import moment from "moment";
 import styles from "./index.module.css";
 
 export const CustomBlogItem = ({ data }: { data: IResponse<BlogOutput> }) => {

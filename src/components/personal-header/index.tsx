@@ -52,8 +52,6 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
   const [scrollPoint, setScrollPoint] = useState<number>(0);
   const { personalState, setpersonalState } = useContext(AppContext);
 
-  console.log(personalState);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrollPoint(window.scrollY);
@@ -70,7 +68,7 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
     <PersonHeaderWrapper ref={PersonHeaderRef}>
       {rectTop == 0 && rectTop != undefined ? (
         <div className="flex w-full h-[64px] bigger-animation justify-center relative items-center header-content">
-          <h2 className="appear-animation absolute ">TanHiep</h2>
+          <h2 className="appear-animation absolute ">Miracle</h2>
           <div className="max-w-[1040px] w-full flex justify-between items-center bigger-animation2 ">
             {PersonalMenu.map((perMenu, index) => (
               <PersonalMenuItem

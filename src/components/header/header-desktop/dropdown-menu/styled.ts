@@ -43,7 +43,7 @@ export const ButtonItem = styled(Link)`
 
   h5,
   h6 {
-    font-family: var(--tanHiepHeading-medium-font) !important;
+    font-family: var(--blog-medium-font) !important;
     font-size: 16px;
   }
 
