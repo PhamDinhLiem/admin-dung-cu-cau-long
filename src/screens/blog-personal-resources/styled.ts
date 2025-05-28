@@ -8,10 +8,7 @@ export const BlogResourcesScreenWrapper = styled.div`
 `;
 
 export const BlogResourcesScreenContent = styled.div`
-  padding-top: 80px;
-  padding-bottom: 80px;
   width: 100%;
   max-width: 1080px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 80px 30px;
 `;

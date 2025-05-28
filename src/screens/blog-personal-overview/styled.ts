@@ -8,13 +8,10 @@ export const BlogOverViewScreenWrapper = styled.div`
 `;
 
 export const BlogOverViewScreenContent = styled.div`
-  padding-top: 80px;
-  padding-bottom: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
-  padding-right: 30px;
-  padding-left: 30px;
-  max-width: 1080px;
   gap: 30px;
+  width: 100%;
+  display: grid;
+  max-width: 1080px;
+  padding: 80px 30px;
+  grid-template-columns: 1fr 1fr 1fr;
 `;

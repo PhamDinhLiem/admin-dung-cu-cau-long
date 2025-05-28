@@ -1,12 +1,12 @@
 import { styled } from "styled-components";
 
 export const PersonHeaderWrapper = styled.div`
+  top: 0px;
+  width: 100%;
   display: flex;
   position: sticky;
-  top: 0px;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  justify-content: center;
   background-color: rgb(255, 206, 0);
 
   .appear-animation {
@@ -60,9 +60,9 @@ export const PersonHeaderWrapper = styled.div`
 `;
 
 export const PersonalMenuItem = styled.div<{ $isHavePathName?: boolean }>`
-  cursor: pointer;
-  height: 52px;
   flex-grow: 1;
+  height: 52px;
+  cursor: pointer;
 
   p {
     height: 100%;

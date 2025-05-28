@@ -1,8 +1,10 @@
 "use client";
 
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { PersonalMenuItem, PersonHeaderWrapper } from "./styled";
 import AppContext from "@/contexts/app";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 interface PersonaHeaderProps {
   slug?: string;
@@ -47,10 +49,22 @@ const PersonalMenu = [
 ];
 
 const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
-  const PersonHeaderRef = useRef<HTMLDivElement>(null);
-  const rectTop = PersonHeaderRef.current?.getBoundingClientRect().top!;
+  const personHeaderRef = useRef<HTMLDivElement>(null);
+  const [rectTop, setRectTop] = useState<any>(null);
   const [scrollPoint, setScrollPoint] = useState<number>(0);
-  const { personalState, setpersonalState } = useContext(AppContext);
+  const { personalState, setPersonalState } = useContext(AppContext);
+  const pathName = usePathname();
+  //const router = useRouter();
+
+  const handleOnChange = (e: MouseEvent, pathName: string, title: string) => {
+    e.preventDefault;
+  };
+
+  useEffect(() => {
+    if (personHeaderRef) {
+      setRectTop(personHeaderRef.current?.getBoundingClientRect().top!);
+    }
+  }, [personHeaderRef, scrollPoint]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +79,7 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
   }, [scrollPoint]);
 
   return (
-    <PersonHeaderWrapper ref={PersonHeaderRef}>
+    <PersonHeaderWrapper ref={personHeaderRef}>
       {rectTop == 0 && rectTop != undefined ? (
         <div className="flex w-full h-[64px] bigger-animation justify-center relative items-center header-content">
           <h2 className="appear-animation absolute ">Miracle</h2>
@@ -76,7 +90,7 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
                 className={perMenu.title == personalState ? `bg-focus` : ``}
                 onClick={(e) => {
                   e.preventDefault;
-                  setpersonalState(perMenu.title);
+                  setPersonalState(perMenu.title);
                 }}
               >
                 <p className="text-[18px]">{perMenu.title}</p>
@@ -92,7 +106,7 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
               className={perMenu.title == personalState ? `bg-focus` : ``}
               onClick={(e) => {
                 e.preventDefault;
-                setpersonalState(perMenu.title);
+                setPersonalState(perMenu.slug);
               }}
             >
               <p>{perMenu.title}</p>

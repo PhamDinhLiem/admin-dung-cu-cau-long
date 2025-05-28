@@ -7,18 +7,16 @@ export const BlogPersonalSubcategoryWrapper = styled.div`
   justify-content: center;
 `;
 export const BlogPersonalSubcategoryContent = styled.div`
-  padding-top: 80px;
-  padding-bottom: 80px;
   width: 100%;
   max-width: 1080px;
+  padding: 80px 0px;
 `;
 
 export const BlogTopNewsSection = styled.section`
-  display: flex;
-  border-top: 2px solid #e5e7eb;
-  border-bottom: 2px solid #e5e7eb;
-  padding: 15px 0px;
   gap: 15px;
+  display: flex;
+  padding-block: 15px;
+  border-block: 2px solid #e5e7eb; /* Thay cho border-top và border-bottom */
 
   h3 {
     line-height: normal;

@@ -9,7 +9,7 @@ const BlogAboutScreen = () => {
     <ContainerBlog>
       <BlogAboutScreenWrapper>
         <div className="w-full h-fit flex justify-center max-w-[1200px] mb-5 gap-[40px]">
-          <div className="w-1/2 h-fit img-content ]">
+          <div className="w-1/2 h-fit img-content ">
             <Image
               className="w-full"
               width={`${200}`}

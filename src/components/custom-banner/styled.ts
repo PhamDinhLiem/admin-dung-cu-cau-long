@@ -2,11 +2,11 @@ import { device } from "@/styles/media";
 import styled from "styled-components";
 
 export const BlogBannerWrapper = styled.div`
-  position: relative;
-  display: flex;
   width: 100%;
-  margin-top: 0px;
+  display: flex;
   height: 400px;
+  margin-top: 0px;
+  position: relative;
 
   .absolute-black {
     background-color: black;

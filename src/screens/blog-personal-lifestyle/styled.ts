@@ -8,8 +8,7 @@ export const BlogLifeStyleScreenWrapper = styled.div`
 `;
 
 export const BlogLifeStyleScreenContent = styled.div`
-  padding-top: 80px;
-  padding-bottom: 80px;
   width: 100%;
   max-width: 1080px;
+  padding: 80px 0px;
 `;

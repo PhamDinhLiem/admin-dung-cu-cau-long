@@ -6,10 +6,10 @@ export const InputSearchWrapper = styled.div<{ active: boolean }>`
   margin: 10px 0;
   position: relative;
   border-radius: 100px;
-  border: 1px solid ${({ active }) => (active ? "#EA8E31" : "#DBDFE1")};
+  transition: all 0.3s ease;
   background-color: transparent;
   caret-color: ${({ theme }) => theme.color.status.primary};
-  transition: all 0.3s ease;
+  border: 1px solid ${({ active }) => (active ? "#EA8E31" : "#DBDFE1")};
 
   align-items: center;
   position: relative;

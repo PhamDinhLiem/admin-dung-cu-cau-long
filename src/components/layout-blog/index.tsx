@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "@/components/header";
-import BlogBanner from "@/components/customBanner";
+import BlogBanner from "@/components/custom-banner";
 import { BlockContentWrapper, LayoutBlogsWrapper } from "./styled";
 import { Blk_Bold, Blk_ExtraBold, Blk_medium, headingBlogFont, mediumHeadingBlogFont } from "@/styles/font";
 import { Footer } from "../footer";

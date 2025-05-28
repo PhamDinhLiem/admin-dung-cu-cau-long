@@ -8,18 +8,16 @@ export const BlogLatestNewsScreenWrapper = styled.div`
 `;
 
 export const BlogLatestNewsScreenContent = styled.div`
-  padding-top: 80px;
-  padding-bottom: 80px;
   width: 100%;
   max-width: 1080px;
+  padding: 80px 0px;
   min-height: 600px;
 `;
 
 export const BlogLatestNewsScreenBlock = styled.div`
- display: flex;
- flex-direction: column;
- gap: 15px;
- padding-bottom: 15px;
- padding-top: 15px;
- border-bottom: 0.1px solid gray;
+  gap: 15px;
+  display: flex;
+  padding: 15px 0px;
+  flex-direction: column;
+  border-bottom: 0.1px solid gray;
 `;

@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import { LayoutBlogsWrapper } from "./styled";
 import Header from "@/components/header";
-import BlogBanner from "@/components/customBanner";
+import BlogBanner from "@/components/custom-banner";
 
 export default function LayoutBlogs({ children }: any) {
   return (

@@ -10,7 +10,6 @@ export const BlogDetail = ({ data }: { data: IResponse<BlogOutput> }) => {
   return (
     <div className="mb-50">
       <LineDate date={moment(release_date).format("DD.MM.YYYY")} />
-
       <div className="mt-20 mb-24">
         <h2 className="text-center mb-32 sm-mb-24">{title}</h2>
         <img src={`${process.env.NEXT_GRAPHQL_API_ENDPOINT}${formats?.medium?.url ?? url}`} alt={title} />

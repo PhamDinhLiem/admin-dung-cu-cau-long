@@ -17,19 +17,19 @@ const BlogPersonalScreen = () => {
   //Render
   const BlogPersonal = useMemo(() => {
     switch (personalState) {
-      case "Overview":
+      case "overview":
         return BlogPersonalOverview;
-      case "Latest News":
+      case "latest-news":
         return BlogPersonalLatestNews;
-      case "Business":
+      case "business":
         return BlogPersonalBusiness;
-      case "Market":
+      case "market":
         return BlogPersonalBusiness; // để tạm
-      case "Education":
+      case "education":
         return BlogPersonalEducation;
-      case "LifeStyle":
+      case "lifeStyle":
         return BlogPersonalLifeStyle;
-      case "Resources":
+      case "resources":
         return BlogPersonalResources;
     }
     return Fragment;
