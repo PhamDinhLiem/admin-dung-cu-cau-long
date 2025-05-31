@@ -7,7 +7,7 @@ interface BlockBorderTopProps {
 
 const BlockBorderTop = ({ pt, children }: BlockBorderTopProps) => {
   return (
-    <div style={{ paddingTop: pt }} className="border-t-2 border-black">
+    <div style={{ paddingTop: pt }} className="border-t border-black">
       {children}
     </div>
   );

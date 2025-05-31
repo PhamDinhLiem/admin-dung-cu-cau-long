@@ -27,7 +27,7 @@ const BlogPersonalScreen = () => {
         return BlogPersonalBusiness; // để tạm
       case "education":
         return BlogPersonalEducation;
-      case "lifeStyle":
+      case "lifestyle":
         return BlogPersonalLifeStyle;
       case "resources":
         return BlogPersonalResources;

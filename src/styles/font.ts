@@ -13,6 +13,17 @@ export const headingBlogFont = localFont({
   variable: "--blog-big-font",
 });
 
+export const italicBlogFont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/CheltehamItalic.woff2",
+    },
+  ],
+  display: "swap",
+  preload: true,
+  variable: "--blog-intalic-font",
+});
+
 export const mediumHeadingBlogFont = localFont({
   src: [
     {

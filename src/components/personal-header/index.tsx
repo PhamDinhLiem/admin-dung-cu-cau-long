@@ -33,7 +33,7 @@ const PersonalMenu = [
   },
   {
     title: "LifeStyle",
-    slug: "life-style",
+    slug: "lifestyle",
     href: "",
   },
   {
