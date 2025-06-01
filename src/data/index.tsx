@@ -98,7 +98,7 @@ export const fakeDataNewsVer2 = [
     category: "business",
     subcategory: "technology",
     slug: "techs-trump-whisperer-tim-cook-goes-quiet-as-his-influence-fades",
-    extablishedDate: Date.now(),
+    extablishedDate: new Date(Date.now()),
     intro:
       "Apple’s chief executive has gone from winning President Trump’s praise to drawing his ire, deepening the company’s woes in a very bad year.",
     featuredImage: {
@@ -386,7 +386,7 @@ export const fakeDataNewsVer2 = [
     title: "The Times and Amazon Announce an A.I. Licensing Deal",
     category: "business",
     subcategory: "technology",
-    extablishedDate: Date.now(),
+    extablishedDate: new Date(Date.now()),
     slug: "the-times-and-amazon-announce-ai-licensing-deal",
     intro:
       "In 2023, The Times sued OpenAI and Microsoft for copyright infringement. Now its editorial content will appear across Amazon platforms.",
@@ -566,8 +566,292 @@ export const fakeDataNewsVer2 = [
     title: "Google Introduced a New Way to Use Search. Proceed With Caution",
     category: "business",
     subcategory: "technology",
-    extablishedDate: Date.now(),
+    extablishedDate: new Date(Date.now()),
     slug: "google-introduced-new-way-to-use-search-proceed-with-caution",
+    intro:
+      "AI Mode excels at tasks like product research for online shopping. But it falls short on basic web searches.",
+    featuredImage: {
+      url: "http://static01.nyt.com/images/2025/05/29/business/00techfix-aisearch/00techfix-aisearch-superJumbo.jpg?quality=75&auto=webp",
+      height: 500,
+      width: 800,
+    },
+    content: {
+      raw: {
+        children: [
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Last week, I asked Google to help me plan my daughter’s birthday party by finding a park in Oakland, Calif., with picnic tables. The site generated a list of parks nearby, so I went to scout two of them out — only to find there were, in fact, no tables.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "“I was just there,” I typed to Google. “I didn’t see wooden tables.”",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Google acknowledged the mistake and produced another list, which again included one of the parks with no tables.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "I repeated this experiment by asking Google to find an affordable carwash nearby. Google listed a service for $25, but when I arrived, a carwash cost $65.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "I also asked Google to find a grocery store where I could buy an exotic pepper paste. Its list included a nearby Whole Foods, which didn’t carry the item.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "I wasn’t doing traditional web searches on Google.com. I was testing the company’s new AI Mode, a tool that is similar to chatbots like ChatGPT and Google’s Gemini, where users can type in questions to get answers. AI Mode, which is rolling out worldwide in the coming weeks, will soon appear as a tab next to your Google.com search results.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "The arrival of AI Mode underscores how new technology is redefining what it means to search for something online. For decades, a web search involved looking up keywords, like “most reliable car brands,” to show a list of relevant websites.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Now, with generative A.I., the technology that powers chatbots by using complex language models to guess what words belong together, you can ask more specific questions or make complicated requests. That could include directing it to create a chart comparing the five most reliable 2025 sedans.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Google, which has already been showing A.I.-generated summaries on its search pages for the last year, said AI Mode was a new frontier for search that would complement — but not yet replace — its traditional counterpart.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "“We’re really trying for AI Mode to be best at a new class of questions that are harder, more specific, and really the best for when you’re going back and forth trying to get something done,” Robby Stein, a Google executive who oversees the search product team, said in an interview.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "The prominent placement of AI Mode on Google.com shows that A.I. is rapidly becoming unavoidable. Meta has added a chatbot, Meta AI, in Messenger, WhatsApp and Instagram, and Microsoft has integrated A.I. into its Bing search engine and its latest Surface computers.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "What’s unique about AI Mode is that the technology stitches together data from Google’s vast empire of internet services to provide an answer to a query. When you type a question, it could pull data from search queries on Google.com, location information on Google Maps and Google’s shopping data on consumer products.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "To help assess whether A.I. is the future of search, I tested the new tool against traditional Google searches for a multitude of personal tasks over the last week, including shopping for a toddler car seat, preparing for a Memorial Day barbecue and understanding the plot twists of a popular video game.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "The results were mixed, with lots of hits but also lots of misses, so I encourage people to use AI Mode with caution.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Here’s how it went.",
+              },
+            ],
+          },
+          {
+            type: "heading-three",
+            children: [
+              {
+                text: "AI Mode vs. Google Search",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "For each of my experiments, I opened AI Mode in one browser tab and Google.com with its traditional search bar in another. I typed the same query in each tab, then compared AI Mode’s answers with Google’s top list of search results.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "That helped determine whether AI Mode was more effective or I was better off clicking on search results to find the answers.",
+              },
+            ],
+          },
+          {
+            type: "heading-four",
+            children: [
+              {
+                text: "Searching for Things and Places",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "My earlier examples of picnic tables, a grocery item and a cheap carwash were similar in that they involved asking Google to find places or objects in the real world. Each of those queries prompted Google’s A.I. to pull my location information and scan sources found on the web.",
+              },
+            ],
+          },
+          {
+            type: "grid-img",
+            children: [
+              {
+                text: "https://static01.nyt.com/images/2025/05/29/business/29techfix_picnictables-02/29techfix_picnictables-02-superJumbo.png?quality=75&auto=webp",
+              },
+              {
+                text: "https://static01.nyt.com/images/2025/05/29/business/29techfix_picnictables/29techfix_picnictables-superJumbo.png?quality=75&auto=webp",
+              },
+            ],
+          },
+          {
+            type: "list-text",
+            children: [
+              {
+                text: "Google’s AI Mode list included two parks with no picnic tables, but when I used Google.com to do the same search, its top three results included parks nearby that had tables.",
+              },
+              {
+                text: "Google’s AI Mode suggested that the carwash I visited was $25 based on one user review that mentioned this price. But a Google search showed several Yelp reviews of the business, where people reported a more accurate range of $50 to $70.",
+              },
+              {
+                text: "Google’s AI Mode generated a list of grocery stores, including Whole Foods, that potentially sold the aji amarillo paste that I needed to make Peruvian chicken for a Memorial Day barbecue. When I did a normal Google search for the paste nearby, the search engine took me to an Instacart listing confirming that one of the stores listed by AI Mode, Berkeley Bowl, carried the paste.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Winner: Google search by a long shot. ",
+                bold: true,
+              },
+              {
+                text: "AI Mode’s suggestions were sometimes accurate, but failing to check its answers could lead you down the wrong path and waste your time.",
+                bold: false,
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Google said users of AI Mode could share feedback so it could quickly learn.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "“It’s early days, and these are technologies that are just starting to roll out now,” Mr. Stein said. “As we learn about how to improve it, we’ll improve it as quickly as possible.”",
+              },
+            ],
+          },
+          {
+            type: "heading-four",
+            children: [
+              {
+                text: "Product Research",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "In another test, I asked Google’s A.I. to help me research toddler car seats. This is where I saw the technology’s potential to become very useful.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "Unlike a traditional web search, which would require me to read reviews of various car seat models and jot down a list including their pricing and features, AI Mode did all of this for me.",
+              },
+            ],
+          },
+          {
+            type: "paragraph",
+            children: [
+              {
+                text: "I typed: “I’m shopping for a convertible car seat. Create a table for me including popular models from Graco, Chicco and others and include pricing and main features.” Google immediately generated a handy chart to make comparing five car seats easy.",
+              },
+            ],
+          },
+          {
+            type: "image",
+            children: [
+              {
+                text: "https://static01.nyt.com/images/2025/05/29/business/29techfix_carseat/29techfix_carseat-jumbo.png?quality=75&auto=webp",
+                height: 500,
+                width: 800,
+              },
+            ],
+          },
+        ],
+      },
+    },
+    author: {
+      name: "The Miracle Corp",
+      bio: "A passionate writer and observer of life in Hanoi, sharing stories of culture, tradition, and daily life.",
+      photo: {
+        url: "https://example.com/author-photo.jpg", // URL to the author's photo
+      },
+      title: "Author of the Month",
+    },
+  },
+  {
+    title: "Fate of Google’s Search Monopoly Is Now in a Judge’s Hands",
+    category: "business",
+    subcategory: "technology",
+    extablishedDate: new Date(Date.now()),
+    slug: "fate-of-googles-search-monopoly-now-in-judges-hands",
     intro:
       "AI Mode excels at tasks like product research for online shopping. But it falls short on basic web searches.",
     featuredImage: {

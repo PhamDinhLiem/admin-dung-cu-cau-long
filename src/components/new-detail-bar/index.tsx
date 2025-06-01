@@ -19,7 +19,7 @@ const readTex = (text: string) => {
   }
 };
 
-interface NewDetailBarProps {
+export interface NewDetail {
   title: string;
   category: string;
   subcategory: string;
@@ -37,7 +37,7 @@ interface NewDetailBarProps {
         type: string;
         children: {
           text: string;
-          bold: string;
+          bold?: string | boolean;
         }[];
       }[];
     };
@@ -52,7 +52,7 @@ interface NewDetailBarProps {
   };
 }
 
-const NewDetailBar = ({ NewDetail }: { NewDetail: NewDetailBarProps }) => {
+const NewDetailBar = ({ NewDetail }: { NewDetail: NewDetail }) => {
   const [isRead, setIsRead] = useState<boolean>(false);
   const [currentReadIndex, setCurrentReadIndex] = useState<any>(0);
   const [isReading, setIsReading] = useState<boolean>(true);
@@ -67,14 +67,6 @@ const NewDetailBar = ({ NewDetail }: { NewDetail: NewDetailBarProps }) => {
   useEffect(() => {
     setReadList(NewDetail.content.raw.children);
   }, [currentReadIndex]);
-
-  useEffect(() => {
-    console.log(readList);
-  }, [readList]);
-
-  useEffect(() => {
-    console.log(NewDetail);
-  }, []);
 
   return (
     <NewDetailBarWrapper>
