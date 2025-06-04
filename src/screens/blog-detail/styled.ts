@@ -4,6 +4,7 @@ export const BlogDetailScreenWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  padding-bottom: 80px;
   min-height: 500px;
   align-items: center;
   flex-direction: column;
