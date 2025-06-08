@@ -15,25 +15,20 @@ const BlogBanner = ({}: BannerProps) => {
 
   // Tạo một component hợp lệ dựa trên pathName
   const handleBanner = (pathName: string) => {
-    switch (pathName) {
-      case "/blog":
-        setBanner(() => SliderContentVer1); // Set the component function directly
-        break;
-      case "/blog/about":
-        // eslint-disable-next-line react/display-name
-        setBanner(() => () => <SliderContentVer2 page="About Me" />);
-        break;
-      case "/blog/contact":
-        // eslint-disable-next-line react/display-name
-        setBanner(() => () => <SliderContentVer2 page="Contact Me" />);
-        break;
-      case "/blog/personal":
-        // eslint-disable-next-line react/display-name
-        setBanner(() => () => <SliderContentVer2 page="Personal" />);
-        break;
-      default:
-        // eslint-disable-next-line react/display-name
-        setBanner(() => () => <SliderContentVer2 page="Not valid page" />); // Default to null if no match
+    if (pathName === "/blog") {
+      setBanner(() => SliderContentVer1);
+    } else if (pathName === "/blog/about") {
+      // eslint-disable-next-line react/display-name
+      setBanner(() => () => <SliderContentVer2 page="About Me" />);
+    } else if (pathName === "/blog/contact") {
+      // eslint-disable-next-line react/display-name
+      setBanner(() => () => <SliderContentVer2 page="Contact Me" />);
+    } else if (pathName === "/blog/personal") {
+      // eslint-disable-next-line react/display-name
+      setBanner(() => () => <SliderContentVer2 page="Personal" />);
+    } else {
+      // eslint-disable-next-line react/display-name
+      setBanner(() => () => <SliderContentVer2 page="Not valid page" />);
     }
   };
 
