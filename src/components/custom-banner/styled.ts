@@ -1,4 +1,3 @@
-import { device } from "@/styles/media";
 import styled from "styled-components";
 
 export const BlogBannerWrapper = styled.div`
@@ -11,8 +10,19 @@ export const BlogBannerWrapper = styled.div`
   .absolute-black {
     background-color: black;
   }
+
   img {
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 576px) {
+    .blog-content {
+      width: 100% !important ;
+    }
+
+    .hide-mobile-blog {
+      display: none;
+    }
   }
 `;

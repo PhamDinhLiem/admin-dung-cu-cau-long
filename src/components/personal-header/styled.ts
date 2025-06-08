@@ -9,6 +9,14 @@ export const PersonHeaderWrapper = styled.div`
   justify-content: center;
   background-color: rgb(255, 206, 0);
 
+  @media (max-width: 576px) {
+    top: 60px;
+
+    .header-content {
+      display: none;
+    }
+  }
+
   .appear-animation {
     animation: fadeIN 0.5s ease-in-out;
   }
@@ -63,6 +71,7 @@ export const PersonalMenuItem = styled.div<{ $isHavePathName?: boolean }>`
   flex-grow: 1;
   height: 52px;
   cursor: pointer;
+  animation: fadeIN 0.7s ease-in-out;
 
   p {
     height: 100%;
@@ -72,5 +81,47 @@ export const PersonalMenuItem = styled.div<{ $isHavePathName?: boolean }>`
 
   :hover {
     background-color: rgb(204, 165, 0);
+  }
+`;
+
+export const PersonalHeaderMobile = styled.div`
+  width: 100%;
+  display: none;
+
+  @media (max-width: 576px) {
+    display: block;
+
+    .appear {
+      display: block;
+    }
+
+    .disappear {
+      display: none;
+    }
+
+    .display-none {
+      display: none;
+      height: 0px;
+    }
+
+    @keyframes dropDown {
+      0% {
+        height: 0px;
+      }
+      100% {
+        height: fit-content;
+      }
+    }
+
+    @keyframes dropUp {
+      0% {
+        height: fit-content;
+        display: none;
+      }
+      100% {
+        height: 0px;
+        display: none;
+      }
+    }
   }
 `;

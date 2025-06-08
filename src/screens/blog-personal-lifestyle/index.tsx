@@ -23,11 +23,7 @@ const BlogPersonalLifeStyle = () => {
   return (
     <BlogLifeStyleScreenWrapper>
       <BlogLifeStyleScreenContent>
-        <CommonContainer
-          title={LifeStyleCategory.title}
-          subCategorys={LifeStyleCategory.subCategories}
-          description={LifeStyleCategory.description}
-        />
+        <CommonContainer category={LifeStyleCategory} />
       </BlogLifeStyleScreenContent>
     </BlogLifeStyleScreenWrapper>
   );

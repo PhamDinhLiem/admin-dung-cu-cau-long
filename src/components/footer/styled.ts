@@ -28,6 +28,14 @@ export const FooterWrapper = styled.div`
     padding-top: 64px;
     color: white;
   }
+
+  @media (max-width: 576px) {
+    .footer_content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
 `;
 
 export const InvestorContactContentWrapper = styled.div`
@@ -66,5 +74,23 @@ export const EmailContentWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     width: 70%;
   }
+
+  @media (max-width: 576px) {
+    .checkout_section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 `;
-export const MangageContentWrapper = styled.div``;
+export const MangageContentWrapper = styled.div`
+  @media (max-width: 576px) {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+`;

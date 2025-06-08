@@ -35,6 +35,9 @@ module.exports = withMT({
         carousel: "marquee 60s linear infinite",
         blink: "blink 1.4s both infinite",
       },
+      screen: {
+        'sm-custom':'576px',
+      }
     },
   },
   future: {

@@ -12,6 +12,10 @@ export const BlogLatestNewsScreenContent = styled.div`
   max-width: 1080px;
   padding: 80px 0px;
   min-height: 600px;
+
+  @media (max-width: 576px) {
+    padding: 20px;
+  }
 `;
 
 export const BlogLatestNewsScreenBlock = styled.div`

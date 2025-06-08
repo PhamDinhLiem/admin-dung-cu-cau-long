@@ -1,4 +1,3 @@
-import { device } from "@/styles/media";
 import styled from "styled-components";
 
 export const CarouselWrapper = styled.div`
@@ -9,6 +8,6 @@ export const CarouselWrapper = styled.div`
   }
 
   button {
-    bottom: 2px !important; 
+    bottom: 2px !important;
   }
 `;

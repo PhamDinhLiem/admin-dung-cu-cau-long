@@ -8,8 +8,8 @@ const BlogAboutScreen = () => {
   return (
     <ContainerBlog>
       <BlogAboutScreenWrapper>
-        <div className="w-full h-fit flex justify-center max-w-[1200px] mb-5 gap-[40px]">
-          <div className="w-1/2 h-fit img-content ">
+        <div className="w-full h-fit flex justify-center max-w-[1200px] mb-5 gap-[40px] mb-flex-col ">
+          <div className="w-1/2 h-fit img-content mb-w-full  ">
             <Image
               className="w-full"
               width={`${200}`}
@@ -21,7 +21,7 @@ const BlogAboutScreen = () => {
               alt="Nguyen Tan Hiep chan dung"
             />
           </div>
-          <div className="w-1/2">
+          <div className="w-1/2 mb-w-full">
             <h2 className="mb-5 text-[32px]">About</h2>
             <p>
               BlackRock TCP Capital Corp. is an externally-managed specialty finance company focused on middle-market

@@ -63,6 +63,10 @@ export const WrapperTitle = styled.div<{ show: boolean }>`
     cursor: pointer !important;
   }
 
+  p {
+    font-size: 16px !important;
+  }
+
   svg {
     transition: 0.3s all ease-in-out;
     transform: ${({ show }) => (show ? "rotate(0deg)" : "rotate(-180deg) ")};

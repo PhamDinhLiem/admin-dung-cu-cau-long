@@ -3,7 +3,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BlogBannerWrapper } from "./styled";
 import { usePathname } from "next/navigation";
-import { SliderContentVer1, SliderContentVer2 } from "../customSlider";
+import { SliderContentVer1, SliderContentVer2 } from "../custom-slider";
 import AppContext from "@/contexts/app";
 
 interface BannerProps {}
@@ -63,7 +63,7 @@ const BlogBanner = ({}: BannerProps) => {
           {/* Render the Banner component only if it's set */}
           {Banner && <Banner />}
         </div>
-        <img alt="bannerImg" src={`${process.env.basePath}/img/blogBanner.jpg`} className="w-1/2" />
+        <img alt="bannerImg" src={`${process.env.basePath}/img/blogBanner.jpg`} className="w-1/2 hide-mobile-blog" />
       </div>
     </BlogBannerWrapper>
   );

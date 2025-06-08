@@ -49,6 +49,16 @@ export const style = css`
     --font-lora: ${inter.style.fontFamily};
   }
 
+  @media ${device.mobile} {
+    .mb-w-full {
+      width: 100% !important;
+    }
+
+    .mb-flex-col {
+      flex-direction: column;
+    }
+  }
+
   html,
   body {
     font-family: var(--font-inter);
@@ -277,6 +287,12 @@ export const style = css`
   }
   .absolute {
     position: absolute;
+  }
+
+  @media ${device.mobile} {
+    .mb-w-full {
+      width: 100% !important;
+    }
   }
 
   ${renderSpace("margin")};

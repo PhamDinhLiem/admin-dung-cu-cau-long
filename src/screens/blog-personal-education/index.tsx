@@ -12,11 +12,7 @@ const BlogPersonalEducation = () => {
   return (
     <BlogEducationScreenWrapper>
       <BlogEducationScreenContent>
-        <CommonContainer
-          title={EducationCategory.title}
-          subCategorys={EducationCategory.subCategories}
-          description={EducationCategory.description}
-        />
+        <CommonContainer category={EducationCategory} />
       </BlogEducationScreenContent>
     </BlogEducationScreenWrapper>
   );

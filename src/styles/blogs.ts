@@ -300,5 +300,13 @@ export const BlogsStyle = css`
 
       width: 100%;
     }
+
+    .mb-w-full {
+      width: 100%;
+    }
+
+    .hide-mobile-blog {
+      display: none;
+    }
   }
 `;

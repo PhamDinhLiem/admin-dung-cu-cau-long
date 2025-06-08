@@ -20,7 +20,6 @@ const CarouselCustom = ({ children, height = 400, className = "" }: CarouselProp
         autoplayDelay={7000}
         loop
         autoplay
-        style={{ height: size.width >= 786 ? height : 300, objectFit: "cover" }}
         className={`${className}`}
         prevArrow={({ handlePrev }) => (
           <IconButton

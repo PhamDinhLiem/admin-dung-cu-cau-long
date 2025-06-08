@@ -26,17 +26,17 @@ interface NewsItem {
   src: string;
 }
 
-const handlePathName = (pathName: string) => {
+export const handlePathName = (pathName: string) => {
   const parts = pathName.split("/");
   return parts[parts.length - 1]; //Lấy subCategory
 };
 
 const BlogPersonalSubcategoryScreen = () => {
   const pathname = usePathname();
-  const [subCategory, setSubCategory] = useState<string>("");
   const { personalState } = useContext(AppContext);
-  const [paginationNews, setpaginationNews] = useState<NewsItem[]>([]); // phần tin tức này sẽ được pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [subCategory, setSubCategory] = useState<string>("");
+  const [paginationNews, setpaginationNews] = useState<NewsItem[]>([]); // phần tin tức này sẽ được pagination
 
   //các state chia tin tức thành các phần
   const [topNews, settopNews] = useState(fakeDataNews.slice(0, 4)); // lấy 4 phần tin tức mới nhất
@@ -71,20 +71,20 @@ const BlogPersonalSubcategoryScreen = () => {
       <PersonalHeader />
       <BlogPersonalSubcategoryWrapper>
         <BlogPersonalSubcategoryContent>
-          <h1 className="text-[28px]">{`${personalState}/${subCategory}`}</h1>
+          <h1 className="text-[28px] ">{`${subCategory}`}</h1>
           {topNews ? (
             <BlogTopNewsSection>
-              <div className="w-1/2 flex flex-col gap-4">
+              <div className="w-1/2 flex flex-col gap-4 mb-w-full ">
                 <img src={topNews[0].src} alt={topNews[0].title} className="h-[50%]" />
                 <h3 className="">{topNews[0].title}</h3>
                 <p>{topNews[0].content}</p>
               </div>
-              <div className="w-1/3  flex flex-col gap-3 px-2 border-r-2 border-l-2">
+              <div className="w-1/3  flex flex-col gap-3 px-3 border-r-2 border-l-2 mb-w-full ">
                 <img src={topNews[1].src} alt={topNews[0].title} />
                 <h4 className="">{topNews[1].title}</h4>
                 <p>{topNews[1].content}</p>
               </div>
-              <div className="w-1/3 flex flex-col gap-5">
+              <div className="w-1/3 flex flex-col gap-5 mb-w-full ">
                 <div className="h-1/2 flex flex-col gap-3">
                   <img src={topNews[2].src} className="h-[130px]" alt={topNews[0].title} />
                   <h4 className="">{topNews[2].title}</h4>

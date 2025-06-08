@@ -6,10 +6,19 @@ export const BlogPersonalSubcategoryWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 export const BlogPersonalSubcategoryContent = styled.div`
   width: 100%;
-  max-width: 1080px;
+  max-width: 1040px;
   padding: 80px 0px;
+
+  @media (max-width: 576px) {
+    padding: 20px;
+
+    .mb-w-full {
+      width: 100%;
+    }
+  }
 `;
 
 export const BlogTopNewsSection = styled.section`
@@ -21,9 +30,23 @@ export const BlogTopNewsSection = styled.section`
   h3 {
     line-height: normal;
   }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 `;
 
 export const BlogPaginationNews = styled.section`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 576px) {
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
 `;

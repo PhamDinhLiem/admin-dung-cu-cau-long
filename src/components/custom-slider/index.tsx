@@ -30,10 +30,10 @@ export const SliderContentVer1 = () => {
       <SliderContentVer1Wrapper className="w-full">
         <CarouselCustom>
           {fakeDataNews.map((news, index) => (
-            <div className="flex flex-col pt-20 gap-2 h-[300px]" key={index}>
+            <div className="flex flex-col pt-20 gap-2 h-[300px] mobile-implement" key={index}>
               <h1 className="text-white text-[40px]">{news.title}</h1>
               <hr />
-              <h1 className="text-white text-[32px]">{news.content}</h1>
+              <h1 className="text-white text-[32px] subtitle">{news.content}</h1>
             </div>
           ))}
         </CarouselCustom>

@@ -5,8 +5,6 @@ import styled, { css } from "styled-components";
 
 export const HeaderMobileWrapper = styled.div`
   width: 100%;
-  position: fixed;
-  z-index: 999;
   display: flex;
   /* border-top: 1px solid black; */
   justify-content: center;
@@ -17,17 +15,18 @@ export const HeaderMobileContent = styled.div`
   width: 100%;
   gap: 16px;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: space-between;
 
-  background-color: ${({ theme }) => theme.color.status.primary};
+  background-color: black;
+
+  //background-color: ${({ theme }) => theme.color.status.primary};
 `;
 
 export const MenuList = styled(Flex)`
   flex-direction: column;
   height: 100vh;
   padding: 16px;
-  background-color: ${({ theme }) => theme.color.status.primary};
+  background-color: black;
 `;
 
 export const MenuItem = styled.h5<{ $active: boolean }>`

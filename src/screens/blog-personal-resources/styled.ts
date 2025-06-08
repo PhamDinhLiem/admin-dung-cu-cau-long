@@ -11,4 +11,8 @@ export const BlogResourcesScreenContent = styled.div`
   width: 100%;
   max-width: 1080px;
   padding: 80px 30px;
+
+  @media (max-width: 576px) {
+    padding: 20px;
+  }
 `;

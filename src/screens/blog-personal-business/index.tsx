@@ -5,18 +5,14 @@ const BusinessCategory = {
   title: "Business",
   description:
     'The Board of Directors of BlackRock TCP Capital Corp. (the "Company") sets high standards for the Company and for its officers. To fulfill its responsibilities and to discharge its duty, the Board of Directors follows the procedures and standards that are set forth in these guidelines. These guidelines are subject to modification from time to time as the Board of Directors deems appropriate and as required by applicable laws and regulations.',
-  subCategories: ["Finance", "Economy", "Tech", "Stock", "Crypto"],
+  subCategories: ["Finace", "Economy", "Tech", "Stock", "Crypto"],
 };
 
 const BlogPersonalBusiness = () => {
   return (
     <BlogBusinessScreenWrapper>
       <BlogBusinessScreenContent>
-        <CommonContainer
-          title={BusinessCategory.title}
-          subCategorys={BusinessCategory.subCategories}
-          description={BusinessCategory.description}
-        />
+        <CommonContainer category={BusinessCategory} />
       </BlogBusinessScreenContent>
     </BlogBusinessScreenWrapper>
   );

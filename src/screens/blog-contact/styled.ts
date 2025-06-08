@@ -10,4 +10,9 @@ export const BlogContactScreenWrapper = styled.div`
   .img-content {
     padding-top: 52px;
   }
+
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;

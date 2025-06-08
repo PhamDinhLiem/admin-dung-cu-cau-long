@@ -38,4 +38,12 @@ export const BlogDetailScreenContent = styled.div`
   .grid-imgs {
     max-height: 450px !important;
   }
+
+  @media (max-width: 576px) {
+    padding: 20px;
+
+    .mb-w-full {
+      width: 100%;
+    }
+  }
 `;

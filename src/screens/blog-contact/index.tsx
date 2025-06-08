@@ -9,8 +9,8 @@ const BlogContactScreen = () => {
   return (
     <ContainerBlog>
       <BlogContactScreenWrapper>
-        <img alt="contactImg" src={`${process.env.basePath}/img/blogBanner.jpg`} className="w-6/12" />
-        <div className="w-6/12 flex flex-col gap-2">
+        <img alt="contactImg" src={`${process.env.basePath}/img/blogBanner.jpg`} className="w-6/12 mb-w-full" />
+        <div className="w-6/12 flex flex-col gap-2 mb-w-full ">
           <h3>Name *</h3>
           <CustomInputVer1 placeholder="Name" type="text" />
           <h3>Email *</h3>

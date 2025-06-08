@@ -3,7 +3,7 @@ import { LinkProps } from "@/@custom-types";
 import Modal from "@/components/modal";
 import useWindowResize from "@/hooks/use-window-resize";
 import { ButtonIcon } from "@/styles/button";
-import { Container } from "@/styles/common";
+import { Container, Flex } from "@/styles/common";
 import Link from "next/link";
 import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
 import Icons from "../../icons";
@@ -77,13 +77,15 @@ const HeaderMobile = ({ data, showInput, setShowInput }: HeaderMobileProps) => {
   return (
     <HeaderMobileWrapper className="hide-desktop">
       <HeaderMobileContent>
-        <ButtonIcon onClick={() => setShow(true)}>
-          <Icons icon="hamburger" />
-        </ButtonIcon>
+        <Flex>
+          <Link href={"/blog"}>
+            <h2 className="text-[30px] text-white">Miracle</h2>
+          </Link>
+        </Flex>
 
-        <Link href={"/"}>
-          <img width={90} src={`${process.env.basePath}/img/logo_homeease.png`} alt="" />
-        </Link>
+        <ButtonIcon onClick={() => setShow(true)}>
+          <Icons icon="hamburger" color="text-black" />
+        </ButtonIcon>
 
         <Modal
           bg="#37ABF4"
@@ -95,24 +97,6 @@ const HeaderMobile = ({ data, showInput, setShowInput }: HeaderMobileProps) => {
           }}
         >
           {/* use tailwind */}
-          <div>
-            <div
-              className="flex items-center    border-b border-white border-opacity-25 pointer"
-              onClick={() => {
-                router.push("/");
-                setShow(false);
-              }}
-            >
-              <img
-                className="w-20 h-20 rounded-full ml-0 mr-0"
-                src={`${process.env.NEXT_PUBLIC_API_ENDPOINT}${author?.avatar.data.attributes.url}`}
-              />
-              <div className="text-sm">
-                <h3 className="text-white leading-none">{author?.name}</h3>
-                <p className="text-white body-3">{author?.self_bio}</p>
-              </div>
-            </div>
-          </div>
 
           <MenuList $gapMb={16}>
             {data?.map((item, index) =>

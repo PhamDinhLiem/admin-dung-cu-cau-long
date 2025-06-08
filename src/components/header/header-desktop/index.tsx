@@ -39,7 +39,7 @@ const HeaderDesktop = ({ data, showInput, setShowInput }: HeaderProps) => {
     <HeaderDesktopWrapper className="hide-mobile py-1">
       <HeaderDesktopContent>
         <Flex>
-          <Link href={"/"}>
+          <Link href={"/blog"}>
             <h2 className="text-[30px]">Miracle</h2>
           </Link>
         </Flex>
