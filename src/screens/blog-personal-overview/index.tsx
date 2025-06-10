@@ -5,6 +5,7 @@ import { BlogOverViewScreenContent, BlogOverViewScreenWrapper } from "./styled";
 import BlockBorderTop from "@/components/block-border-top";
 import { IoDocumentText } from "react-icons/io5";
 import CustomButton from "@/components/custom-button";
+import ReadMoreButton from "@/components/read-more-btn";
 
 const BusinessCategory = ["Finace", "Economy", "Tech", "Stock", "Crypto"];
 const LifeStyleCategory = [
@@ -30,7 +31,10 @@ const BlogPersonalOverview = () => {
         {/*Phần content market hiện tại chưa có nên để trống*/}
         <div className="overview-block market-pannel">
           <BlockBorderTop pt={"20px"}>
-            <h2 className="mb-5">Market </h2>
+            <div className="flex flex-col justify-between h-[500px]">
+              <h2 className="mb-5">Market </h2>
+              <ReadMoreButton link={"/blog/personal"} title="All Market" state="market" />
+            </div>
           </BlockBorderTop>
         </div>
         {/*Phần content resources */}
@@ -52,19 +56,9 @@ const BlogPersonalOverview = () => {
                 </div>
               </div>
             </div>
-            <CustomButton classname={" bg-white flex items-center mt-9"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                className="size-5 text-orange-500  "
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-              <p className="text-black mt-1 font-bold uppercase ">All Resources</p>
-            </CustomButton>
+            <div className="mt-9">
+              <ReadMoreButton link={"/blog/personal"} title="ALL Resources" state="resources" />
+            </div>
           </BlockBorderTop>
         </div>
         {/*Phần content business */}
@@ -78,19 +72,9 @@ const BlogPersonalOverview = () => {
                 </div>
               ))}
             </div>
-            <CustomButton classname={" bg-white flex items-center mt-9"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                className="size-5 text-orange-500  "
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-              <p className="text-black mt-1 font-bold uppercase ">All Business</p>
-            </CustomButton>
+            <div className="mt-9">
+              <ReadMoreButton link={"/blog/personal"} title="All business" state="business" />
+            </div>
           </BlockBorderTop>
         </div>
         {/*Phần content LifeStyle */}
@@ -104,19 +88,9 @@ const BlogPersonalOverview = () => {
                 </div>
               ))}
             </div>
-            <CustomButton classname={" bg-white flex items-center mt-9"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                className="size-5 text-orange-500  "
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-              <p className="text-black mt-1 font-bold uppercase ">All Lifestyle</p>
-            </CustomButton>
+            <div className="mt-9">
+              <ReadMoreButton link={"/blog/personal"} title="All Lifestyle" state="lifestyle" />
+            </div>
           </BlockBorderTop>
         </div>
         {/*Phần content Education */}
@@ -130,19 +104,9 @@ const BlogPersonalOverview = () => {
                 </div>
               ))}
             </div>
-            <CustomButton classname={" bg-white flex items-center mt-9"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                className="size-5 text-orange-500  "
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-              </svg>
-              <p className="text-black mt-1 font-bold uppercase ">All Education</p>
-            </CustomButton>
+            <div className="mt-9">
+              <ReadMoreButton link={"/blog/personal"} title="All education" state="education" />
+            </div>
           </BlockBorderTop>
         </div>
       </BlogOverViewScreenContent>

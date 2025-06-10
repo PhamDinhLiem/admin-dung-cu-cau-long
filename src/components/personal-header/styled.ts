@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 export const PersonHeaderWrapper = styled.div`
   top: 0px;
   width: 100%;
+  z-index: 999;
   display: flex;
   position: sticky;
   align-items: center;

@@ -21,7 +21,7 @@ const BlogHomeScreen = () => {
               Corp’s investment objective is to achieve high total returns through current income and capital
               appreciation, with an emphasis on principal protection.
             </p>
-            <ReadMoreButton link={"/"} />
+            <ReadMoreButton link={"/blog/about"} />
           </BlockBorderTop>
         </AboutBlockWrapper>
         {/**Phần block Contact */}
@@ -91,7 +91,7 @@ const BlogHomeScreen = () => {
               </a>
               <p className="font-semibold text-[15px] mt-2 mb-5">+84 352760309</p>
             </div>
-            <ReadMoreButton link={"/"} />
+            <ReadMoreButton link={"/blog/contact"} />
           </BlockBorderTop>
         </ContactBlockWrapper>
       </BlogHomeScreenWrapper>

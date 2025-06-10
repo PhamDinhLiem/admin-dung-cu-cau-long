@@ -1,24 +1,15 @@
 import styled from "styled-components";
-import { device } from "@/styles/media";
 
-export const ReadMoreButtonWrapper = styled.button`
+export const ReadMoreButtonWrapper = styled.div`
+  z-index: 1;
   display: flex;
   align-items: center;
   padding-bottom: 3px;
-  position: relative;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 2px;
-    background-color: transparent;
-    transition: background-color 0.3s;
-  }
-
-  &:hover::before {
-    background-color: orange;
+  p {
+    line-height: 24px !important;
+    text-align: center;
   }
 `;

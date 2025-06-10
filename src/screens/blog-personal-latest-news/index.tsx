@@ -65,6 +65,7 @@ interface NewsDataProps {
   year: string;
 }
 
+//Hàm lấy danh sách năm để filter
 const getFilterYear = (newsData: NewsDataProps[]): string[] => {
   const years = newsData.map((news) => news.year);
   const setYears = new Set(years); // goi den set de loai bo cac gia tri trung lap

@@ -25,7 +25,7 @@ export const DropDownWrapper = styled.div<{ show: boolean }>`
   }
 `;
 
-export const ButtonItem = styled(Link)`
+export const ButtonItem = styled.button`
   text-align: start;
   padding-top: 8px;
   padding-bottom: 8px;

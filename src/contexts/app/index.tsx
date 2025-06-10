@@ -1,5 +1,7 @@
 "use !!client";
 
+import { fakeDataNewsVer2 } from "@/data";
+import { sortNewsList } from "@/utils/blog-utils";
 import { usePathname } from "next/navigation";
 import { Dispatch, ReactNode, SetStateAction, createContext, useState } from "react";
 
@@ -14,9 +16,13 @@ const AppContext = createContext<{
   setPlHeader?: any;
   personalState?: string;
   setPersonalState?: any;
+  sortedNews?: any;
 }>({
   loading: false,
 });
+
+//Sort lại danh sách tin tức từ raw data
+const sortedNews = sortNewsList(fakeDataNewsVer2);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
@@ -38,6 +44,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
         setPlHeader,
         personalState,
         setPersonalState,
+        sortedNews,
       }}
     >
       {children}

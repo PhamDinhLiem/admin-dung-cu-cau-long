@@ -18,10 +18,10 @@ export type HeaderProps = {
 };
 
 const HeaderDesktop = ({ data, showInput, setShowInput }: HeaderProps) => {
-  const pathname = usePathname();
+  const pathName = usePathname();
+  const size: any = useWindowResize();
   const [showDropdown, setShowDropdown] = useState("");
   const { setPlHeader } = useContext(AppContext);
-  const size: any = useWindowResize();
 
   const getPlHeader = () => {
     const headerWrapper = document.querySelector(".hide-mobile") as HTMLElement;
@@ -54,10 +54,11 @@ const HeaderDesktop = ({ data, showInput, setShowInput }: HeaderProps) => {
                   data={item.children}
                   title={item.label}
                   value={item.value}
+                  pathName={pathName}
                 />
               ) : (
                 <Link href={item.href ?? ""} key={index}>
-                  <MenuItem className="text-lg" $active={pathname == item.href} $isHavePathName={pathname.length > 0}>
+                  <MenuItem className="text-lg" $active={pathName == item.href} $isHavePathName={pathName.length > 0}>
                     <p className="text-gray-500 cursor-pointer">{item.label}</p>
                   </MenuItem>
                 </Link>

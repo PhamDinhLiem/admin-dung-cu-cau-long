@@ -98,7 +98,7 @@ export const fakeDataNewsVer2 = [
     category: "business",
     subcategory: "technology",
     slug: "techs-trump-whisperer-tim-cook-goes-quiet-as-his-influence-fades",
-    extablishedDate: new Date(Date.now()),
+    extablishedDate: new Date("2024-12-20"),
     intro:
       "Apple’s chief executive has gone from winning President Trump’s praise to drawing his ire, deepening the company’s woes in a very bad year.",
     featuredImage: {
@@ -386,7 +386,7 @@ export const fakeDataNewsVer2 = [
     title: "The Times and Amazon Announce an A.I. Licensing Deal",
     category: "business",
     subcategory: "technology",
-    extablishedDate: new Date(Date.now()),
+    extablishedDate: new Date("2020-12-20"),
     slug: "the-times-and-amazon-announce-ai-licensing-deal",
     intro:
       "In 2023, The Times sued OpenAI and Microsoft for copyright infringement. Now its editorial content will appear across Amazon platforms.",
@@ -566,7 +566,7 @@ export const fakeDataNewsVer2 = [
     title: "Google Introduced a New Way to Use Search. Proceed With Caution",
     category: "business",
     subcategory: "technology",
-    extablishedDate: new Date(Date.now()),
+    extablishedDate: new Date("2023-10-10"),
     slug: "google-introduced-new-way-to-use-search-proceed-with-caution",
     intro:
       "AI Mode excels at tasks like product research for online shopping. But it falls short on basic web searches.",
@@ -850,7 +850,7 @@ export const fakeDataNewsVer2 = [
     title: "Fate of Google’s Search Monopoly Is Now in a Judge’s Hands",
     category: "business",
     subcategory: "technology",
-    extablishedDate: new Date(Date.now()),
+    extablishedDate: new Date("2022-8-10"),
     slug: "fate-of-googles-search-monopoly-now-in-judges-hands",
     intro:
       "AI Mode excels at tasks like product research for online shopping. But it falls short on basic web searches.",
