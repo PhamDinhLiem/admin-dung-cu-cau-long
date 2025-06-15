@@ -70,7 +70,7 @@ const NewDetailBar = ({ NewDetail }: { NewDetail: NewDetail }) => {
 
   return (
     <NewDetailBarWrapper>
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center ">
         <div className="flex justify-center items-center size-9 border-2 rounded-full text-gray-600 hover:bg-black hover:text-white">
           {isRead ? (
             <FaPause

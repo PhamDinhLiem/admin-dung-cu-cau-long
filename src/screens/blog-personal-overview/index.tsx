@@ -4,23 +4,16 @@ import LatestNewsBLock from "@/components/latest-news-block";
 import { BlogOverViewScreenContent, BlogOverViewScreenWrapper } from "./styled";
 import BlockBorderTop from "@/components/block-border-top";
 import { IoDocumentText } from "react-icons/io5";
-import CustomButton from "@/components/custom-button";
 import ReadMoreButton from "@/components/read-more-btn";
+import { BusinessCategory } from "../blog-personal-business";
+import { LifeStyleCategory } from "../blog-personal-lifestyle";
+import { EducationCategory } from "../blog-personal-education";
+import Link from "next/link";
 
-const BusinessCategory = ["Finace", "Economy", "Tech", "Stock", "Crypto"];
-const LifeStyleCategory = [
-  "All Lifestyle",
-  "Food",
-  "Love",
-  "Your Money",
-  "Well",
-  "Travel",
-  "Style",
-  "Personal Tech",
-  "Real Estate",
-  "T Magazine",
-];
-const EducationCategory = ["Research", "Reporting", "Publications", "Teaching", "Students"];
+//hàm xóa khoảng trắng
+function removeSpace(str: string) {
+  return str.replace(/\s+/g, "-");
+}
 
 const BlogPersonalOverview = () => {
   return (
@@ -66,9 +59,14 @@ const BlogPersonalOverview = () => {
           <BlockBorderTop pt={"20px"}>
             <h2 className="mb-5">Business </h2>
             <div className="flex gap-2 flex-col ">
-              {BusinessCategory.map((item, index) => (
+              {BusinessCategory.subCategories.map((subCategory, index) => (
                 <div key={index} className="business-item cursor-pointer">
-                  <a className="cursor-pointer hover:underline">{item}</a>
+                  <Link
+                    className="cursor-pointer hover:underline capitalize"
+                    href={`/blog/personal/${removeSpace(subCategory)}/`}
+                  >
+                    {subCategory}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -82,9 +80,14 @@ const BlogPersonalOverview = () => {
           <BlockBorderTop pt={"20px"}>
             <h2 className="mb-5">LifeStyle </h2>
             <div className="grid grid-cols-2 grid-rows-5 gap-2">
-              {LifeStyleCategory.map((item, index) => (
+              {LifeStyleCategory.subCategories.map((subCategory: string, index) => (
                 <div key={index} className="business-item cursor-pointer">
-                  <a className="cursor-pointer hover:underline">{item}</a>
+                  <Link
+                    className="cursor-pointer hover:underline capitalize"
+                    href={`/blog/personal/${removeSpace(subCategory)}/`}
+                  >
+                    {subCategory}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -98,9 +101,14 @@ const BlogPersonalOverview = () => {
           <BlockBorderTop pt={"20px"}>
             <h2 className="mb-5">Education </h2>
             <div className="flex gap-2 flex-col ">
-              {EducationCategory.map((item, index) => (
+              {EducationCategory.subCategories.map((subCategory: string, index) => (
                 <div key={index} className="business-item cursor-pointer">
-                  <a className="cursor-pointer hover:underline">{item}</a>
+                  <Link
+                    className="cursor-pointer hover:underline capitalize"
+                    href={`/blog/personal/${removeSpace(subCategory)}/`}
+                  >
+                    {subCategory}
+                  </Link>
                 </div>
               ))}
             </div>

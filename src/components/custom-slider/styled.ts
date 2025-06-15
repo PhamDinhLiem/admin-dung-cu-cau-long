@@ -1,13 +1,23 @@
 import styled from "styled-components";
 
 export const BlogSliderWrapper = styled.div`
-  position: relative;
-  display: flex;
-  background-color: #000000;
-  padding-right: 10%;
-  padding-left: 8.5%;
   width: 100%;
   height: 100%;
+  display: flex;
+  position: relative;
+  padding-left: 8.5%;
+  padding-right: 10%;
+  background-color: #000000;
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+  }
 
   @media (max-width: 576px) {
     padding-left: 0px;
@@ -31,9 +41,9 @@ export const SliderContentVer1Wrapper = styled.div`
     width: 100%;
 
     .mobile-implement {
-      height: 300px !important;
       width: 100%;
       justify-content: center;
+      height: 300px !important;
     }
   }
 `;

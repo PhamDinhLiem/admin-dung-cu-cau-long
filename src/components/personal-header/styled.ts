@@ -10,6 +10,30 @@ export const PersonHeaderWrapper = styled.div`
   justify-content: center;
   background-color: rgb(255, 206, 0);
 
+  //Tablet size lớn
+  @media (max-width: 1200px) {
+    padding: 0px 2%;
+
+    .nodisplay {
+      display: none;
+    }
+
+    .bigger-animation2 {
+      animation: emBroadenTablet 0.7s ease-in-out;
+    }
+  }
+
+  //Tablet
+  @media (max-width: 850px) {
+    .nodisplay {
+      display: none;
+    }
+
+    .bigger-animation2 {
+      animation: emBroadenTablet2 0.7s ease-in-out;
+    }
+  }
+
   @media (max-width: 576px) {
     top: 60px;
 
@@ -49,6 +73,7 @@ export const PersonHeaderWrapper = styled.div`
     }
   }
 
+  //Animation cho desktop
   @keyframes emBroaden {
     0% {
       height: 52px;
@@ -64,6 +89,25 @@ export const PersonHeaderWrapper = styled.div`
     }
     100% {
       max-width: 1040px;
+    }
+  }
+
+  // Animation cho tablet
+  @keyframes emBroadenTablet {
+    0% {
+      max-width: 1140px;
+    }
+    100% {
+      max-width: 900px;
+    }
+  }
+
+  @keyframes emBroadenTablet2 {
+    0% {
+      max-width: 1140px;
+    }
+    100% {
+      max-width: 750px;
     }
   }
 `;

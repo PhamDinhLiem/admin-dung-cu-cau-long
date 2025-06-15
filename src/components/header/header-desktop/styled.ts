@@ -10,18 +10,25 @@ export const HeaderDesktopWrapper = styled.div`
 
 export const HeaderDesktopContent = styled(Container)`
   width: 100%;
-  z-index: 10;
   display: flex;
-  justify-content: space-between;
+  margin-left: 3%;
+  max-width: 1240px;
+  margin-right: 20px;
   align-items: center;
   padding-left: 0px !important;
   padding-right: 0px !important;
-  margin-left: 3%;
-  margin-right: 20px;
-  max-width: 1240px;
+  justify-content: space-between;
 
   @media ${device.mobile} {
     padding: 8px 16px;
+  }
+
+  @media (max-width: 1200px) {
+    max-width: 1040px;
+  }
+
+  @media (max-width: 1000px) {
+    width: auto;
   }
 `;
 
@@ -35,10 +42,6 @@ export const MenuList = styled.div<{}>`
   transition: all 0.3s ease;
   a {
     flex-shrink: 0;
-  }
-
-  @media (max-width: 1200px) {
-    width: 60%;
   }
 `;
 

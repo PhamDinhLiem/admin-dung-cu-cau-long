@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { BlogSliderWrapper, SliderContentVer1Wrapper, SliderContentVer2Wrapper } from "./styled";
 import CarouselCustom from "../carousel";
 
@@ -8,7 +7,7 @@ interface SliderProps {
   page?: string;
 }
 
-const fakeDataNews = [
+const sliderDataNews = [
   {
     title: "Miracle TCP Capital Corp. (Nasdaq: TCPC)",
     content:
@@ -29,7 +28,7 @@ export const SliderContentVer1 = () => {
     <BlogSliderWrapper>
       <SliderContentVer1Wrapper className="w-full">
         <CarouselCustom>
-          {fakeDataNews.map((news, index) => (
+          {sliderDataNews.map((news, index) => (
             <div className="flex flex-col pt-20 gap-2 h-[300px] mobile-implement" key={index}>
               <h1 className="text-white text-[40px]">{news.title}</h1>
               <hr />

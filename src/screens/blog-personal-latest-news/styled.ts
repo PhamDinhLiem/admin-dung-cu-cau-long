@@ -13,6 +13,10 @@ export const BlogLatestNewsScreenContent = styled.div`
   padding: 80px 0px;
   min-height: 600px;
 
+  @media (max-width: 1100px) {
+    padding: 40px 4%;
+  }
+
   @media (max-width: 576px) {
     padding: 20px;
   }
@@ -21,7 +25,12 @@ export const BlogLatestNewsScreenContent = styled.div`
 export const BlogLatestNewsScreenBlock = styled.div`
   gap: 15px;
   display: flex;
+  cursor: pointer;
   padding: 15px 0px;
   flex-direction: column;
   border-bottom: 0.1px solid gray;
+
+  :hover p {
+    text-decoration: underline;
+  }
 `;

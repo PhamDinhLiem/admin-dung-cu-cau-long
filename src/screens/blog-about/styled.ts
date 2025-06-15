@@ -7,6 +7,18 @@ export const BlogAboutScreenWrapper = styled.div`
   padding-bottom: 80px;
   justify-content: center;
 
+  @media (max-width: 1000px) {
+    padding: 40px 20px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
   .img-content {
     padding-top: 52px;
   }

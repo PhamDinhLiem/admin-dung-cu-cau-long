@@ -1,105 +1,46 @@
 import CustomPagination from "@/components/custom-pagination";
 import { BlogLatestNewsScreenBlock, BlogLatestNewsScreenContent, BlogLatestNewsScreenWrapper } from "./styled";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
+import AppContext from "@/contexts/app";
+import { handleDateToString } from "@/utils/blog-utils";
+import Link from "next/link";
 
-const fakeDataNews = [
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content:
-      "Long-term relationships with borrowers and deal sources who rely on our deep industry knowledge and in-house legal expertise",
-    month: "April",
-    date: "10",
-    year: "2025",
-  },
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content: "More than 20 years of experience investing in private credit through multiple market cycles",
-    month: "April",
-    date: "10",
-    year: "2025",
-  },
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content:
-      "Long-term relationships with borrowers and deal sources who rely on our deep industry knowledge and in-house legal expertise",
-    month: "April",
-    date: "10",
-    year: "2025",
-  },
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content: "More than 20 years of experience investing in private credit through multiple market cycles",
-    month: "April",
-    date: "10",
-    year: "2025",
-  },
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content: "More than 20 years of experience investing in private credit through multiple market cycles",
-    month: "April",
-    date: "10",
-    year: "2026",
-  },
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content: "More than 20 years of experience investing in private credit through multiple market cycles",
-    month: "April",
-    date: "10",
-    year: "2026",
-  },
-  {
-    title: "BlackRock TCP Capital Corp. (Nasdaq: TCPC)",
-    content: "More than 20 years of experience investing in private credit through multiple market cycles",
-    month: "April",
-    date: "10",
-    year: "2027",
-  },
-];
-
-interface NewsDataProps {
-  title: string;
-  content: string;
-  month: string;
-  date: string;
-  year: string;
-}
-
-//Hàm lấy danh sách năm để filter
-const getFilterYear = (newsData: NewsDataProps[]): string[] => {
-  const years = newsData.map((news) => news.year);
+const getUniqueYears = (sortedNews: [any]) => {
+  //Lọc các trường năm thành 1 danh sách
+  const years = sortedNews.map((news: any) => news.extablishedDate.getFullYear().toString());
   const setYears = new Set(years); // goi den set de loai bo cac gia tri trung lap
-  const uniqueYears: string[] = [];
-  setYears.forEach((year) => uniqueYears.push(year));
+  const uniqueYears: string[] = []; // mảng lưu lại các năm đã loại bỏ giá trị trùng lặp
+  setYears.forEach((year: any) => uniqueYears.push(year));
   return uniqueYears;
 };
 
 const BlogPersonalLatestNews = () => {
-  const [years, setYear] = useState<string[]>(getFilterYear(fakeDataNews));
-  const [currentNewPage, setCurrentNewPage] = useState<NewsDataProps[]>([]);
-  const [blogNews, setBlogNews] = useState<NewsDataProps[]>([]);
-  const [filterYear, setFilterYear] = useState<string>(years[0]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const { sortedNews } = useContext(AppContext); // danh sách tin tức đã được lọc
+  const [fillterYears, setfilterYears] = useState<string[]>(getUniqueYears(sortedNews)); //state này là mảng chứa các năm để filter theo nam
+  const [currentNewPage, setCurrentNewPage] = useState<any[]>([]); // state này lưu danh sách bài viết hiện tại trong pagination
+  const [blogNews, setBlogNews] = useState<any[]>([]);
+  const [currentPage, setCurrentPage] = useState<number>(1); // vị trí trang hiện tại --index
+  const [onFilterYear, setOnFilterYear] = useState<string>(fillterYears[0]); //năm đang được filter
 
-  ///useEffect này để get các giá trị năm cho chức năng filter sau
-  useEffect(() => {
-    const selectYears = getFilterYear(fakeDataNews);
-    setYear(selectYears);
-  }, []);
-  ///
   useEffect(() => {
     const lastPostIndex = currentPage * 3;
     const firstPostIndex = lastPostIndex - 3;
 
-    let currentNews: NewsDataProps[] = [...fakeDataNews];
-    if (filterYear) {
-      currentNews = currentNews.filter((news) => news.year === filterYear);
+    //clone lại danh sách bài viết để xử lý
+    let currentNews: any[] = [...sortedNews];
+
+    // nếu có năm đang được chọn thì thì lọc ra danh sách bài viết theo danh sách
+    if (onFilterYear) {
+      currentNews = currentNews.filter((item: any) => item.extablishedDate.getFullYear().toString() === onFilterYear);
     }
 
     setBlogNews(currentNews);
 
     setCurrentNewPage(currentNews.slice(firstPostIndex, lastPostIndex));
-  }, [currentPage, filterYear]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage, onFilterYear]);
 
   return (
     <BlogLatestNewsScreenWrapper>
@@ -109,10 +50,10 @@ const BlogPersonalLatestNews = () => {
           <p>Year:</p>
           <select
             className="px-2 rounded-none py-1 font-light"
-            onChange={(e) => setFilterYear(e.target.value)}
-            value={filterYear}
+            onChange={(e) => setOnFilterYear(e.target.value)}
+            value={onFilterYear}
           >
-            {years.map((year, index) => (
+            {fillterYears.map((year, index) => (
               <option className=" rounded-none" value={year} key={index}>
                 {year}
               </option>
@@ -121,17 +62,19 @@ const BlogPersonalLatestNews = () => {
         </div>
         {/*Phần list danh sách tin tức filter theo năm*/}
         <div className="mt-5 mb-5">
-          {currentNewPage.map((item, index) => (
-            <BlogLatestNewsScreenBlock key={index}>
-              <p className="text-[17px] font-bold">{`${item.date} ${item.month} ${item.year}`}</p>
-              <p className="text-[16px]">{item.content}</p>
-              <div className="flex items-center gap-1">
-                <div className="flex px-1 py-1 items-center rounded-full justify-center bg-gray-500">
-                  <FaEye />
+          {currentNewPage?.map((item, index) => (
+            <Link href={`/blog/personal/${item.subcategory}/${item.slug}`} key={index}>
+              <BlogLatestNewsScreenBlock key={index}>
+                <p className="text-[17px] font-bold">{handleDateToString(item.extablishedDate)}</p>
+                <p className="text-[16px] on-underlined ">{item.title}</p>
+                <div className="flex items-center gap-1">
+                  <div className="flex px-1 py-1 items-center rounded-full justify-center bg-gray-500">
+                    <FaEye />
+                  </div>
+                  <p className="font-bold cursor-pointer">Read More</p>
                 </div>
-                <p className="font-bold ">Read More</p>
-              </div>
-            </BlogLatestNewsScreenBlock>
+              </BlogLatestNewsScreenBlock>
+            </Link>
           ))}
         </div>
         {/*Phần Pagination*/}
@@ -139,7 +82,7 @@ const BlogPersonalLatestNews = () => {
           totalPosts={blogNews.length}
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}
-          filterYear={filterYear}
+          filterYear={onFilterYear}
         />
       </BlogLatestNewsScreenContent>
     </BlogLatestNewsScreenWrapper>

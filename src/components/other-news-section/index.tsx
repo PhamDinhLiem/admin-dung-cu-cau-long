@@ -3,6 +3,7 @@
 import BlockBorderTop from "../block-border-top";
 import { NewDetail } from "../new-detail-bar";
 import { OtherNewsSectionWrapper } from "./styled";
+import Link from "next/link";
 
 interface OtherNewsSectionProps {
   otherNewList: NewDetail[];
@@ -17,14 +18,10 @@ const OtherNewsSection = ({ otherNewList }: OtherNewsSectionProps) => {
           <div className="grid grid-cols-3 justify-between gap-5 grid-2">
             {otherNewList.map((_new: NewDetail, i: any) => (
               <div key={i} className="flex flex-col gap-2">
-                <img src={_new.featuredImage.url} alt={i} className="h-[200px] w-full" />
-                <h1 className="text-[16px] font-light! ">{_new.title}</h1>
-              </div>
-            ))}
-            {otherNewList.map((_new: NewDetail, i: any) => (
-              <div key={i} className="flex flex-col gap-2 grid-2">
-                <img src={_new.featuredImage.url} alt={i} className="h-[150px] w-full" />
-                <h1 className="text-[16px] font-light! ">{_new.title}</h1>
+                <Link href={`/blog/personal/${_new.subcategory}/${_new.slug}`}>
+                  <img src={_new.featuredImage.url} alt={i} className="h-[200px] w-full" />
+                  <h1 className="text-[16px] font-light! ">{_new.title}</h1>
+                </Link>
               </div>
             ))}
           </div>

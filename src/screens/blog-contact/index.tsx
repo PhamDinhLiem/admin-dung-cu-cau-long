@@ -9,7 +9,7 @@ const BlogContactScreen = () => {
   return (
     <ContainerBlog>
       <BlogContactScreenWrapper>
-        <div className="max-w-[1080px] flex  gap-7">
+        <div className="max-w-[1080px] flex  gap-7 flexing-col">
           <img alt="contactImg" src={`${process.env.basePath}/img/blogBanner.jpg`} className="w-[46%] mb-w-full" />
           <div className="w-6/12 flex flex-col gap-2 mb-w-full ">
             <h3>Name *</h3>

@@ -118,8 +118,8 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
       {/* Header cho desktop */}
       {rectTop == 0 && rectTop != undefined ? (
         <div className="flex w-full h-[64px] bigger-animation justify-center relative items-center header-content hide-mobile">
-          <h2 className="appear-animation absolute ">Miracle</h2>
-          <div className="max-w-[1040px] w-full flex justify-between items-center bigger-animation2 ">
+          <h2 className="appear-animation absolute nodisplay">Miracle</h2>
+          <div className="max-w-[1040px] w-full flex justify-between items-center bigger-animation2 tablet-implements ">
             {PersonalMenu.map((perMenu, index: number) => (
               <PersonalMenuItem
                 key={index}
@@ -134,7 +134,7 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
           </div>
         </div>
       ) : (
-        <div className="flex max-w-[1140px] h-[52px] w-full header-content top-0!">
+        <div className="flex max-w-[1140px] h-[52px] w-full header-content top-0! tablet-implements ">
           {PersonalMenu.map((perMenu, index) => (
             <PersonalMenuItem
               key={index}

@@ -35,6 +35,12 @@ export const BlogDetailScreenContent = styled.div`
     font-size: 22px;
   }
 
+  .alt {
+    color: gray;
+    font-size: 14px !important;
+    width: 300px;
+  }
+
   .grid-imgs {
     max-height: 450px !important;
   }

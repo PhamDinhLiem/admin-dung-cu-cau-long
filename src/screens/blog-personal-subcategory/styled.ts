@@ -5,12 +5,23 @@ export const BlogPersonalSubcategoryWrapper = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+
+  img {
+    object-fit: cover;
+  }
 `;
 
 export const BlogPersonalSubcategoryContent = styled.div`
   width: 100%;
   max-width: 1040px;
   padding: 80px 0px;
+
+  @media (max-width: 1040px) {
+    padding: 40px 10px;
+  }
+
+  @media (max-width: 840px) {
+  }
 
   @media (max-width: 576px) {
     padding: 20px;
@@ -29,6 +40,28 @@ export const BlogTopNewsSection = styled.section`
 
   h3 {
     line-height: normal;
+  }
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+
+    .tablet-implement {
+      width: 100%;
+      border: none;
+
+      img {
+        height: 100% !important;
+        max-height: 300px;
+      }
+    }
+
+    .remove-px {
+      padding: 0px;
+    }
+
+    .tablet-h-full {
+      height: 100%;
+    }
   }
 
   @media (max-width: 576px) {
