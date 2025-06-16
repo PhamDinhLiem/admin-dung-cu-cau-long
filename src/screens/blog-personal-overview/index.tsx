@@ -12,7 +12,7 @@ import Link from "next/link";
 
 //hàm xóa khoảng trắng
 function removeSpace(str: string) {
-  return str.replace(/\s+/g, "-");
+  return str.replace(" ", "");
 }
 
 const BlogPersonalOverview = () => {

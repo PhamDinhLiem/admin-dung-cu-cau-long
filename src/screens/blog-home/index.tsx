@@ -15,9 +15,9 @@ const BlogHomeScreen = () => {
           <BlockBorderTop pt="20px">
             <h2 className="mb-9">About </h2>
             <p className="mb-5 text-[15px]">
-              BlackRock TCP Capital Corp. is an externally-managed specialty finance company focused on middle-market
+              Miracle TCP Capital Corp. is an externally-managed specialty finance company focused on middle-market
               lending. We have elected to be regulated as a business development company, or BDC, under the Investment
-              Company Act of 1940. Our stock is traded on NASDAQ under the ticker symbol “TCPC”. BlackRock TCP Capital
+              Company Act of 1940. Our stock is traded on NASDAQ under the ticker symbol “TCPC”. Miracle TCP Capital
               Corp’s investment objective is to achieve high total returns through current income and capital
               appreciation, with an emphasis on principal protection.
             </p>

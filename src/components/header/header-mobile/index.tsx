@@ -5,7 +5,7 @@ import useWindowResize from "@/hooks/use-window-resize";
 import { ButtonIcon } from "@/styles/button";
 import { Container, Flex } from "@/styles/common";
 import Link from "next/link";
-import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, Fragment, SetStateAction, useContext, useEffect, useState } from "react";
 import Icons from "../../icons";
 import {
   ButtonMenu,
@@ -24,6 +24,7 @@ import { formatDataGraphql } from "@/utils";
 import { ERROR_API_MESSAGE } from "@/constants/app/message";
 import { Alert } from "@/components/alert";
 import { useLazyQuery } from "@apollo/client";
+import AppContext from "@/contexts/app";
 
 export type HeaderMobileProps = {
   data: LinkProps[] | undefined;
@@ -32,12 +33,14 @@ export type HeaderMobileProps = {
 };
 
 const HeaderMobile = ({ data, showInput, setShowInput }: HeaderMobileProps) => {
-  const pathname = usePathname();
   const router = useRouter();
+  const pathname = usePathname();
+  const { setPersonalState, personalState } = useContext(AppContext);
 
   const size = useWindowResize();
   const [show, setShow] = useState(false);
   const [showLang, setShowLang] = useState(false);
+
   const [showMenuProduct, setShowMenuProduct] = useState<any>(
     data
       ?.filter((item) => item.children)
@@ -120,11 +123,17 @@ const HeaderMobile = ({ data, showInput, setShowInput }: HeaderMobileProps) => {
                       {item.children.map((child, childIndex) => (
                         <ItemMenuProduct
                           key={childIndex}
-                          href={`${child.href}`}
-                          passHref
-                          shallow
                           onClick={(e) => {
+                            e.preventDefault();
                             setShow(false);
+
+                            if (personalState) {
+                              setPersonalState(child.value);
+                            }
+
+                            if (pathname != "/blog/personal") {
+                              router.push("/blog/personal");
+                            }
                           }}
                         >
                           <p className="body-2">{child.label}</p>

@@ -130,7 +130,7 @@ export const ButtonMenu = styled.button<{ open: boolean }>`
   font-size: 28px;
   font-weight: 700;
   font-family: var(--font-lora);
-  text-transform: initial;
+  text-transform: uppercase;
   justify-content: space-between;
 
   svg {
@@ -151,7 +151,7 @@ export const ProductMenuList = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const ItemMenuProduct = styled(Link)`
+export const ItemMenuProduct = styled.div`
   color: white;
 
   &:not(:first-child) {

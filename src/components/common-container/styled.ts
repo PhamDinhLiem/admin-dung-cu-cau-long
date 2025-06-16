@@ -1,9 +1,11 @@
 import { styled } from "styled-components";
 
 export const CommonContainerWrapper = styled.div`
+  min-height: 400px;
+
   .common-block:hover .icon-section {
-    background-color: rgb(234 88 12);
     color: white;
+    background-color: rgb(234 88 12);
   }
 
   @media (max-width: 1100px) {

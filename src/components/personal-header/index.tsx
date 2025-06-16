@@ -62,7 +62,7 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
   //Xử lý chuyển trang header menu
   const handleOnClick = (e: any, pathName: string, title: string) => {
     //Chặn event tự động chạy
-    e.preventDefault;
+    e.preventDefault();
 
     // lấy phần cuối của url
     const lastPath = handlePathName(pathName);
@@ -71,6 +71,10 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
     if (lastPath != "personal") {
       router.push("/blog/personal");
     }
+
+    const willOpen = !isOpenMb;
+    setIsOpenMb(willOpen); //đóng menu
+    openOrClose(willOpen);
 
     setPersonalState(title);
   };
@@ -83,11 +87,14 @@ const PersonalHeader = ({ slug }: PersonaHeaderProps) => {
     const willOpen = !isOpenMb;
     setIsOpenMb(willOpen);
 
-    // Chỉ thao tác khi ref đã gắn
+    openOrClose(willOpen);
+  };
+
+  //Thực hiện logic đóng mở
+  const openOrClose = (isOpen: boolean) => {
     if (!mobileHeaderContentRef.current) return;
 
-    // Cập nhật style dựa trên willOpen
-    if (willOpen) {
+    if (isOpen) {
       mobileHeaderContentRef.current.style.display = "block";
       mobileHeaderContentRef.current.style.animation = "dropDown 0.5s ease-in-out forwards";
     } else {

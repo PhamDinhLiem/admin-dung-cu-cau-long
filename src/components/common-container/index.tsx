@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { CommonContainerWrapper } from "./styled";
 import { IoIosArrowForward } from "react-icons/io";
 import { useRouter } from "next/navigation";
@@ -27,8 +26,6 @@ const CommonContainer: React.FC<CommmonContainerProps> = ({ category }) => {
   const { title, description, subCategories } = category;
   const { setPersonalState } = useContext(AppContext);
   const router = useRouter();
-
-  console.log(title);
 
   const handleNavigate = (category: string, subCategories: string) => {
     setPersonalState(category);

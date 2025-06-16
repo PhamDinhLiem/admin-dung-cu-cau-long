@@ -9,7 +9,7 @@ export const BlogSliderWrapper = styled.div`
   padding-right: 10%;
   background-color: #000000;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     h1 {
       font-size: 30px;
     }

@@ -73,6 +73,13 @@ export const BlogPaginationNews = styled.section`
   display: flex;
   flex-direction: column;
 
+  .pagination_news_img {
+    width: 200px;
+    object-fit: cover;
+    height: 150px;
+    aspect-ratio: 5 / 3;
+  }
+
   @media (max-width: 576px) {
     h4 {
       font-size: 16px;
