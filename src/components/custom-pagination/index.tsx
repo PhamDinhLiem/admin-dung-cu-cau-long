@@ -19,6 +19,7 @@ const CustomPagination = ({ totalPosts, setCurrentPage, currentPage, filterYear 
   useEffect(() => {
     //set lại trang hiện tại là 1 nếu như người dùng filter theo 1 năm khác
     setCurrentPage(1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterYear]);
 
   return (
