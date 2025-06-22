@@ -5,9 +5,9 @@ import { CustomPaginationWrapper } from "./styled";
 
 interface PaginationProps {
   totalPosts: number; // tổng số bài viết
-  setCurrentPage: Function; // hàm chuyển trang
   currentPage: number; // trang hiện tại
   filterYear?: string; // năm đang được lọc
+  setCurrentPage: Function; // hàm chuyển trang
 }
 
 const CustomPagination = ({ totalPosts, setCurrentPage, currentPage, filterYear }: PaginationProps) => {
