@@ -1,6 +1,6 @@
 import { AuthorOutput, IResponse } from "@/@custom-types/graphql";
 import { getAuthorGraphql, getBlogsHomePageGraphql } from "@/graphql";
-import HomePageScreen from "@/screens/home";
+import AdminDashBoardScreen from "@/screens/admin/dashboard";
 import { first } from "lodash";
 import { Suspense } from "react";
 
@@ -79,7 +79,7 @@ export default async function HomePage({
   return (
     <div>
       <Suspense>
-        <HomePageScreen />
+        <AdminDashBoardScreen />
       </Suspense>
     </div>
   );

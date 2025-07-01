@@ -21,7 +21,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { AuthorOutput } from "@/@custom-types/graphql";
 import { GET_AUTHOR } from "@/graphql/queries/blog";
 import { formatDataGraphql } from "@/utils";
-import { ERROR_API_MESSAGE } from "@/constants/app/message";
+import { ERROR__MESSAGE } from "@/constants/app/message";
 import { Alert } from "@/components/alert";
 import { useLazyQuery } from "@apollo/client";
 import AppContext from "@/contexts/app";

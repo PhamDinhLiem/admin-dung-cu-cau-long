@@ -37,7 +37,7 @@ export const DropDownFiled = styled.div<{
   size?: "sm" | "lg" | "md";
 }>`
   align-items: center;
-  border-radius: 4px;
+  border-radius: 10px;
   height: ${({ size }) => (size == "sm" ? 40 : size == "lg" ? 60 : 50)}px;
   position: relative;
 
@@ -45,13 +45,9 @@ export const DropDownFiled = styled.div<{
 
   background-color: #ffff;
   cursor: pointer;
-  border: 1px solid
+  border: 2px solid
     ${({ active, error, theme }) =>
-      error
-        ? theme?.color?.status.red
-        : active
-        ? theme?.color?.status.primary
-        : theme?.color?.status.grey_dark};
+      error ? theme?.color?.status.red : active ? theme?.color?.status.primary : theme?.color?.status.grey_dark};
 
   svg {
     position: absolute;

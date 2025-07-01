@@ -243,7 +243,7 @@ function DropDown({
         )}
         {isSearch ? (
           <input
-            style={{ padding: "12px 16px", width: "100%" }}
+            style={{ padding: "8px 8px", width: "100%" }}
             value={isFocus ? searchKey : selectedLabel}
             onChange={(e) => setSearchKey(e.target.value)}
             // placeholder={selectedLabel.toString()}
@@ -253,7 +253,9 @@ function DropDown({
             }}
           />
         ) : (
-          <p className={value ? "value" : ""}>{selectedLabel}</p>
+          <p className={`${value ? "value" : ""} ${size == "sm" ? "text-sm" : "text-md"} !font-semibold`}>
+            {selectedLabel}
+          </p>
         )}
         <Icons icon="dropdown" />
       </DropDownFiled>

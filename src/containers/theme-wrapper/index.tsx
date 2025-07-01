@@ -1,10 +1,13 @@
 "use client";
 
+import AdminLayout from "@/components/admin-layout";
 import LayoutBlogs from "@/components/layout-blog";
 import LayoutHome from "@/components/layout-home";
 import AppContext from "@/contexts/app";
+import { AdminStore } from "@/redux/store";
 import { usePathname } from "next/navigation";
 import { Fragment, ReactNode, useContext, useEffect, useMemo } from "react";
+import { Provider } from "react-redux";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 
 export type ThemeWrapperProps = {
@@ -45,10 +48,7 @@ const ThemeWrapper = ({ children, theme }: ThemeWrapperProps) => {
       return Fragment;
     }
     if (!["/"].includes(pathname)) {
-      return LayoutBlogs;
-    }
-    if (["/"].includes(pathname)) {
-      return LayoutHome;
+      return AdminLayout;
     }
 
     return Fragment;
@@ -99,9 +99,9 @@ const ThemeWrapper = ({ children, theme }: ThemeWrapperProps) => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        {/* <Header /> */}
-        <Layout>{children}</Layout>
-        {/* <Footer /> */}
+        <Provider store={AdminStore}>
+          <Layout>{children}</Layout>
+        </Provider>
       </div>
     </ThemeProvider>
   );

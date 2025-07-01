@@ -1,3 +1,4 @@
+import { Label } from "./../styles/input-styled";
 import { IconType } from "@/components/icons";
 
 export interface ValueLabel {
@@ -27,3 +28,12 @@ export interface IconProperty {
 export type ModifiedData<T> = {
   [key in keyof T]?: any;
 };
+
+//admin
+export interface MenuAdminItems {
+  key: string;
+  value: string;
+  icon: any;
+}
+
+export type TextAlign = "left" | "right" | "center" | "";
