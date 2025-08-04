@@ -3,11 +3,14 @@ import { AdminCoreWrapper } from "./styled";
 import { QuanLyComponent } from "@/components/quan-ly-components";
 import { useSelector } from "react-redux";
 import { tableConfigList } from "@/@constant";
-import { productList } from "@/@constant/data";
+import { AdminServices } from "@/services/admin-services";
 
 const AdminCoreScreen = () => {
+  const ad = new AdminServices();
   const [lists, setLists] = useState<any>();
   const onManage = useSelector((state: any) => state.quanly.onQuanLy); //state để biết đang quản lý section nào
+  const loading = useSelector((state: any) => state.quanly.loading); // Để biết có đang loading lại không rồi fetch lại data
+  console.log(onManage);
 
   //Để lấy ra loại bảng hiển thị quản lý
   const tableConfig: any = useMemo(() => {
@@ -15,32 +18,33 @@ const AdminCoreScreen = () => {
     return found?.config;
   }, [onManage]);
 
-  //Call api cần thiết để get dữ liệu tùy vào đang quản lý cái gì
+  //call api dựa vào loại sản phẩm quản lý
   useEffect(() => {
-    if (onManage) {
-    }
-  }, [onManage]);
-
-  //Tạm chưa có nên sẽ để hard code data
-  useEffect(() => {
-    if (onManage) {
-      switch (onManage) {
-        case "trang-chu":
-          return;
-        case "san-pham":
-          setLists(productList);
-          return;
-        default:
-          setLists([]);
+    const fetchData = async () => {
+      let res;
+      if (onManage === "san-pham") {
+        res = await ad.getProductList();
+        setLists(res);
+      } else if (onManage == "nguoi-dung") {
+        res = await ad.getUserList();
+        setLists(res);
+      } else if (onManage == "danh-muc") {
+        res = await ad.getCategoriesLis();
+        setLists(res);
+      } else if (onManage == "don-hang") {
+        res = await ad.getOrderList();
+        setLists(res);
+      } else if (onManage == "bien-the") {
+        res = await ad.getProductList();
+        setLists(res);
+      } else if (onManage == "ma-giam-gia") {
+        res = await ad.getVouchersList();
+        setLists(res);
       }
-    }
-  }, [onManage]);
-
-  const listFormat = useMemo(() => {
-    lists?.map((item: any) => {
-      return {};
-    });
-  }, [lists]);
+    };
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onManage, loading]);
 
   return (
     <AdminCoreWrapper>

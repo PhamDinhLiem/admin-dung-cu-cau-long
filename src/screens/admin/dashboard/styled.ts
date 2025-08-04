@@ -1,3 +1,5 @@
 import { styled } from "styled-components";
 
-export const AdminDashBoardWrapper = styled.div``;
+export const AdminDashBoardWrapper = styled.div`
+  position: relative;
+`;

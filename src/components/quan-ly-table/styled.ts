@@ -1,13 +1,15 @@
 import { styled } from "styled-components";
 
 export const QuanLyTablerWrapper = styled.div`
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: white;
   overflow: hidden;
   overflow-x: auto;
+  padding-top: 20px;
+  position: relative;
   white-space: nowrap;
+  padding-bottom: 20px;
   border-radius: 10px;
+  min-height: 550px;
+  background-color: white;
 `;
 
 export const TrItemWrapper = styled.tr``;

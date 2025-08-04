@@ -7,6 +7,8 @@ import { Dispatch, ReactNode, SetStateAction, createContext, useState } from "re
 
 const AppContext = createContext<{
   initJs?: boolean;
+  product?: any;
+  setProduct?: any;
   setInitJs?: any;
   loading?: boolean;
   setLoading?: Dispatch<SetStateAction<boolean | undefined>>;
@@ -26,6 +28,7 @@ const sortedNews = sortNewsList(fakeDataNewsVer2);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname();
+  const [product, setProducts] = useState<any>();
   const [loading, setLoading] = useState<boolean>();
   const [initJs, setInitJs] = useState<boolean>();
   const [topics, setTopics] = useState([]);

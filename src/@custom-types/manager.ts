@@ -4,4 +4,5 @@ export interface ShowModal {
   data?: any;
   title?: string;
   onConfirm?: () => void;
+  addType?: any;
 }

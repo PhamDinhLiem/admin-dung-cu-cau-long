@@ -4,4 +4,5 @@ export const AdminLayoutWrapper = styled.div``;
 
 export const AdminLayoutContent = styled.div`
   width: 100%;
+  position: relative;
 `;

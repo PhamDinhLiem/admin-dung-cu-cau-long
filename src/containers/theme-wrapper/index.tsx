@@ -1,8 +1,6 @@
 "use client";
 
 import AdminLayout from "@/components/admin-layout";
-import LayoutBlogs from "@/components/layout-blog";
-import LayoutHome from "@/components/layout-home";
 import AppContext from "@/contexts/app";
 import { AdminStore } from "@/redux/store";
 import { usePathname } from "next/navigation";
